@@ -110,13 +110,15 @@ module top(
         .dac_byte2(dac_byte2)
     );
 
-    // 状态指示LED
+	// 状态指示LED
     assign led[0] = uart_rx_valid;    // UART接收指示
-    assign led[1] = data_valid;       // 数据位指示
+    assign led[1] = data_valid;       // 数据位指示  
     assign led[2] = filter_valid;     // 滤波器输出指示
     assign led[3] = mod_valid;        // 调制输出指示
     assign led[4] = carrier_valid;    // 载波指示
-    assign led[7:5] = 3'b000;         // 保留
+    assign led[5] = ~rst_n;           // 复位状态指示（复位时亮）
+    assign led[6] = |uart_rx_data;    // 数据活动指示（有数据时亮）
+    assign led[7] = &{uart_rx_ready, ~uart_rx_valid}; // 空闲状态指示
 
     // UART发送端暂时不使用
     assign uart_tx = 1'b1;

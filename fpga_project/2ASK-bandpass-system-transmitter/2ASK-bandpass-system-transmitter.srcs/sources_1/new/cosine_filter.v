@@ -122,7 +122,7 @@ module cosine_filter(
             // 第四阶段：最终求和和输出
             if (stage3_valid) begin
                 final_sum <= sum_stage1_pipe + sum_stage2_pipe;
-                filtered_out <= (sum_stage1_pipe + sum_stage2_pipe) >>> 11;  // 适当的缩放和截取
+                filtered_out <= final_sum[26:11];  // 适当的缩放和截取
                 out_valid <= 1'b1;
             end
         end
