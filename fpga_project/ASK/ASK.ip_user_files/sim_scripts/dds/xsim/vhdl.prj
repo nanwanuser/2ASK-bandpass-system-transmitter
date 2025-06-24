@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../ASK.srcs/sources_1/ip/dds/sim/dds.vhd" \
+
+nosort

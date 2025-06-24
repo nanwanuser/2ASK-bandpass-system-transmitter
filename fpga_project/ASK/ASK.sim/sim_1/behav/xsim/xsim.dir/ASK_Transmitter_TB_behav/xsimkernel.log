@@ -1,0 +1,7 @@
+Running: xsim.dir/ask_transmitter_tb_behav/xsimk.exe -simmode gui -wdb ask_transmitter_tb_behav.wdb -simrunnum 0 -socket 64995
+Design successfully loaded
+Design Loading Memory Usage: 11548 KB (Peak: 11548 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 14552 KB (Peak: 14552 KB)
+Simulation CPU Usage: 7905 ms
