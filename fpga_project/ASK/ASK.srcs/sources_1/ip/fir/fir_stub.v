@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Wed Jun 25 20:11:27 2025
 // Host        : NanwanPC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top fir -prefix
+//               fir_ fir_stub.v
 // Design      : fir
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcsg324-1

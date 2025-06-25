@@ -6,3 +6,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-
 INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,12 +1,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name: top_2ask_transmitter
-// Description: 2ASK调制器顶层模块（V2.0.3）
+// Description: 2ASK调制器顶层模块（V2.0.4 - 优化版）
 // 
 // 主要修改：
 // 1. 码元速率改为1KHz
 // 2. FIR输出改为32位Full Precision模式
 // 3. 直接使用键控方式，不使用乘法器
-// 4. 优化了时序逻辑
+// 4. 优化了时序逻辑和DAC更新机制
+// 5. 确保DAC高速更新以支持535KHz载波
 //////////////////////////////////////////////////////////////////////////////////
 
 module top_2ask_transmitter(
@@ -24,42 +25,45 @@ module top_2ask_transmitter(
 
 // 参数定义
 parameter CLK_FREQ = 100_000_000;                 // 系统时钟频率 100MHz
-//parameter SYMBOL_RATE = 1_000;                    // 码元速率 1KHz
-parameter SYMBOL_RATE = 100_000;                    // 仿真下码元速率 100KHz
-parameter SYMBOL_PERIOD = CLK_FREQ / SYMBOL_RATE; // 每个码元的时钟周期数 = 100,000
+//parameter SYMBOL_RATE = 1_000;                    // 码元速率 1KHz（实际使用）
+parameter SYMBOL_RATE = 100_000;               // 仿真时可以使用更高的码元速率
+parameter SYMBOL_PERIOD = CLK_FREQ / SYMBOL_RATE; // 每个码元的时钟周期数
 
 // 内部信号
 reg [18:0] rom_addr;
 wire rom_data;
 
-reg [16:0] symbol_counter;           // 码元计数器
+reg [19:0] symbol_counter;           // 码元计数器（扩大以支持低速率）
 reg symbol_clk_en;                   // 码元时钟使能信号
 
 // FIR相关信号
 reg fir_data_valid;
 reg [7:0] fir_data_in;
 wire fir_out_valid;
-wire [31:0] fir_data_out;           // 修改为32位，Full Precision输出
+wire [31:0] fir_data_out;           // 32位，Full Precision输出
 
 // DDS信号
 wire [7:0] dds_data;
 
 // 调制相关信号
 reg [7:0] modulated_signal;
-reg [7:0] fir_data_processed;        // 处理后的FIR数据（取高8位，因为后面的是小数）
-reg modulation_enable;               // 调制使能信号（相当于键控）
+reg modulation_enable;               // 调制使能信号
 wire [7:0] dds_data_unsigned;        // 无符号的DDS数据
+
+// DAC更新控制
+reg dac_update;                      // DAC更新触发信号
+reg [1:0] dac_update_counter;        // DAC更新分频计数器
 
 // ROM地址和使能控制
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         rom_addr <= 19'd0;
-        symbol_counter <= 17'd0;
+        symbol_counter <= 20'd0;
         symbol_clk_en <= 1'b0;
     end else begin
         // 码元时钟生成
         if (symbol_counter >= SYMBOL_PERIOD - 1) begin
-            symbol_counter <= 17'd0;
+            symbol_counter <= 20'd0;
             symbol_clk_en <= 1'b1;
         end else begin
             symbol_counter <= symbol_counter + 1'b1;
@@ -90,18 +94,14 @@ always @(posedge clk or negedge rst_n) begin
 end
 
 // FIR输出处理和调制使能控制
-// 将32位FIR输出截断为8位，取高8位
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        fir_data_processed <= 8'd0;
         modulation_enable <= 1'b0;
     end else begin
         if (fir_out_valid) begin
-            // Full Precision模式下，取最高8位
-            // 假设FIR输出为Q1.31格式，取[30:23]位作为8位无符号数
-            fir_data_processed <= fir_data_out[30:23];
-            // 当FIR输出大于阈值时使能调制
-            modulation_enable <= (fir_data_out[30:23] > 8'd128);
+            // 使用更合理的阈值判断
+            // FIR输出为32位，判断高位部分
+            modulation_enable <= (fir_data_out[31:24] > 8'd128);  // 调整阈值以获得更好的调制效果
         end
     end
 end
@@ -125,6 +125,18 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
+// DAC更新控制 - 确保DAC以足够高的速率更新
+// 对于535KHz载波，使用100MHz/4 = 25MHz的DAC更新率
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        dac_update <= 1'b0;
+        dac_update_counter <= 2'd0;
+    end else begin
+        dac_update_counter <= dac_update_counter + 1'b1;
+        dac_update <= (dac_update_counter == 2'd3);  // 每4个时钟周期更新一次
+    end
+end
+
 // ROM实例化
 ROM u_rom (
     .clka(clk),
@@ -132,13 +144,13 @@ ROM u_rom (
     .douta(rom_data)
 );
 
-// FIR滤波器实例化（修改后的接口）
+// FIR滤波器实例化
 fir u_fir (
     .aclk(clk),
     .s_axis_data_tvalid(fir_data_valid),
     .s_axis_data_tdata(fir_data_in),
     .m_axis_data_tvalid(fir_out_valid),
-    .m_axis_data_tdata(fir_data_out)         // 32位输出
+    .m_axis_data_tdata(fir_data_out)
 );
 
 // DDS实例化
@@ -152,7 +164,7 @@ dac_controller u_dac_controller (
     .clk(clk),
     .rst_n(rst_n),
     .data_in(modulated_signal),
-    .data_valid(1'b1),              // 始终有效
+    .data_valid(dac_update),         // 使用高速更新信号
     .dac_data(dac_data),
     .dac_cs_n(dac_cs_n),
     .dac_wr1_n(dac_wr1_n),
@@ -160,4 +172,5 @@ dac_controller u_dac_controller (
     .dac_xfer_n(dac_xfer_n),
     .dac_ile(dac_ile)
 );
+
 endmodule
