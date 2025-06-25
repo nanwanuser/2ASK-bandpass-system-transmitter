@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Jun 25 15:37:27 2025
-# Process ID: 47708
+# Start of session at: Wed Jun 25 17:05:04 2025
+# Process ID: 47472
 # Current directory: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1
 # Command line: vivado.exe -log fir.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fir.tcl
 # Log file: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/fir.vds
@@ -15,16 +15,16 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23768 
+INFO: Helper process launched with PID 43780 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 423.504 ; gain = 102.789
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 423.059 ; gain = 102.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'fir' [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/synth/fir.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_COMPONENT_NAME bound to: fir - type: string 
 	Parameter C_COEF_FILE bound to: fir.mif - type: string 
-	Parameter C_COEF_FILE_LINES bound to: 33 - type: integer 
+	Parameter C_COEF_FILE_LINES bound to: 36 - type: integer 
 	Parameter C_FILTER_TYPE bound to: 0 - type: integer 
 	Parameter C_INTERP_RATE bound to: 1 - type: integer 
 	Parameter C_DECIM_RATE bound to: 1 - type: integer 
@@ -39,7 +39,7 @@ INFO: [Synth 8-638] synthesizing module 'fir' [d:/Desktop/2ASK_FPGA/2ASK-bandpas
 	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
 	Parameter C_COL_MODE bound to: 1 - type: integer 
 	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
-	Parameter C_COL_CONFIG bound to: 33 - type: string 
+	Parameter C_COL_CONFIG bound to: 4 - type: string 
 	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
 	Parameter C_DATA_PATH_WIDTHS bound to: 8 - type: string 
 	Parameter C_DATA_IP_PATH_WIDTHS bound to: 8 - type: string 
@@ -59,11 +59,11 @@ INFO: [Synth 8-638] synthesizing module 'fir' [d:/Desktop/2ASK_FPGA/2ASK-bandpas
 	Parameter C_EXT_MULT_CNFG bound to: none - type: string 
 	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
 	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
-	Parameter C_NUM_MADDS bound to: 33 - type: integer 
+	Parameter C_NUM_MADDS bound to: 4 - type: integer 
 	Parameter C_OPT_MADDS bound to: none - type: string 
-	Parameter C_OVERSAMPLING_RATE bound to: 1 - type: integer 
-	Parameter C_INPUT_RATE bound to: 1 - type: integer 
-	Parameter C_OUTPUT_RATE bound to: 1 - type: integer 
+	Parameter C_OVERSAMPLING_RATE bound to: 9 - type: integer 
+	Parameter C_INPUT_RATE bound to: 10 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 10 - type: integer 
 	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
 	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
 	Parameter C_IPBUFF_MEMTYPE bound to: 0 - type: integer 
@@ -73,7 +73,7 @@ INFO: [Synth 8-638] synthesizing module 'fir' [d:/Desktop/2ASK_FPGA/2ASK-bandpas
 	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
 	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
 	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
-	Parameter C_LATENCY bound to: 39 - type: integer 
+	Parameter C_LATENCY bound to: 20 - type: integer 
 	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
 	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
 	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
@@ -91,112 +91,111 @@ INFO: [Synth 8-638] synthesizing module 'fir' [d:/Desktop/2ASK_FPGA/2ASK-bandpas
 	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
 	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-3491] module 'fir_compiler_v7_2_11' declared at 'd:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/hdl/fir_compiler_v7_2_vh_rfs.vhd:61157' bound to instance 'U0' of component 'fir_compiler_v7_2_11' [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/synth/fir.vhd:198]
-WARNING: [Synth 8-5858] RAM p_casc_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-5858] RAM p_path_out_reg from Abstract Data Type (record/struct) for this pattern/configuration is not supported. This will most likely be implemented in registers
-INFO: [Synth 8-256] done synthesizing module 'fir' (13#1) [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/synth/fir.vhd:70]
-WARNING: [Synth 8-3331] design delay__parameterized36 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized36 has unconnected port SCLR_ALT
+INFO: [Synth 8-256] done synthesizing module 'fir' (14#1) [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/synth/fir.vhd:70]
+WARNING: [Synth 8-3331] design delay__parameterized9 has unconnected port SCLR_ALT
 WARNING: [Synth 8-3331] design buff__parameterized0 has unconnected port RE
 WARNING: [Synth 8-3331] design buff__parameterized0 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized2 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized16 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized16 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized16 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized16 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized16 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized10 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized10 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design buff__parameterized1 has unconnected port RE
+WARNING: [Synth 8-3331] design buff__parameterized1 has unconnected port SCLR
+WARNING: [Synth 8-3331] design cntrl_delay__parameterized0 has unconnected port CE
+WARNING: [Synth 8-3331] design cntrl_delay__parameterized0 has unconnected port SCLR
+WARNING: [Synth 8-3331] design cntrl_delay__parameterized0 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized8 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized8 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized8 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized8 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized8 has unconnected port CLK
 WARNING: [Synth 8-3331] design buff has unconnected port RE
 WARNING: [Synth 8-3331] design buff has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized40 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized40 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized40 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized40 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized40 has unconnected port CLK
-WARNING: [Synth 8-3331] design delay__parameterized39 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized39 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized39 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized39 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized39 has unconnected port CLK
-WARNING: [Synth 8-3331] design delay__parameterized38 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized38 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized38 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized38 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized38 has unconnected port CLK
-WARNING: [Synth 8-3331] design calc has unconnected port PRE_ADDSUB
-WARNING: [Synth 8-3331] design calc has unconnected port CED
-WARNING: [Synth 8-3331] design delay__parameterized37 has unconnected port WE
-WARNING: [Synth 8-3331] design delay__parameterized37 has unconnected port CE
-WARNING: [Synth 8-3331] design delay__parameterized37 has unconnected port SCLR
-WARNING: [Synth 8-3331] design delay__parameterized37 has unconnected port SCLR_ALT
-WARNING: [Synth 8-3331] design delay__parameterized37 has unconnected port CLK
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][52]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][51]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][50]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][49]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port POUT[casc][48]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port P_EN
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[9]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[8]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[7]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[6]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[5]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[4]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[3]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[2]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[1]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port OPCODE[0]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[29]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[28]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[27]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[26]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[25]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[24]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[23]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[22]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[21]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[20]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[19]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[18]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[17]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[16]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[15]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[14]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[13]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[12]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[11]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[10]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[9]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[8]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[7]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[6]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[5]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[4]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[3]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[2]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[1]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port CIN[0]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][52]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][51]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][50]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][49]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][48]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][47]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][46]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][45]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][44]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][43]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][42]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][41]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][40]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][39]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][38]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][37]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][36]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][35]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][34]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][33]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][32]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][31]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][30]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][29]
-WARNING: [Synth 8-3331] design addsub_mult_add__parameterized0 has unconnected port PIN[casc][28]
+WARNING: [Synth 8-3331] design delay__parameterized17 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized17 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized17 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized17 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized18 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized18 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized18 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized18 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized18 has unconnected port CLK
+WARNING: [Synth 8-3331] design calc__parameterized0 has unconnected port PRE_ADDSUB
+WARNING: [Synth 8-3331] design calc__parameterized0 has unconnected port PRE_ADD_BYPASS
+WARNING: [Synth 8-3331] design calc__parameterized0 has unconnected port CED
+WARNING: [Synth 8-3331] design add_accum has unconnected port POUT[casc][52]
+WARNING: [Synth 8-3331] design add_accum has unconnected port POUT[casc][51]
+WARNING: [Synth 8-3331] design add_accum has unconnected port POUT[casc][50]
+WARNING: [Synth 8-3331] design add_accum has unconnected port POUT[casc][49]
+WARNING: [Synth 8-3331] design add_accum has unconnected port POUT[casc][48]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][47]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][46]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][45]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][44]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][43]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][42]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][41]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][40]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][39]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][38]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][37]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][36]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][35]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][34]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][33]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][32]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][31]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][30]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][29]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][28]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][27]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][26]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][25]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][24]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][23]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][22]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][21]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][20]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][19]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][18]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][17]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][16]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][15]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][14]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][13]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][12]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][11]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][10]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][9]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][8]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][7]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][6]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][5]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][4]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][3]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][2]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][1]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[fab][0]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[casc][52]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[casc][51]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[casc][50]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[casc][49]
+WARNING: [Synth 8-3331] design add_accum has unconnected port PIN[casc][48]
+WARNING: [Synth 8-3331] design delay__parameterized15 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized15 has unconnected port CE
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 595.457 ; gain = 274.742
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 574.355 ; gain = 254.199
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -209,12 +208,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 595.457 ; gain = 274.742
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 574.355 ; gain = 254.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 595.457 ; gain = 274.742
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 574.355 ; gain = 254.199
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -229,32 +228,38 @@ Parsing XDC File [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_pro
 Finished Parsing XDC File [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 830.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 763.191 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 830.719 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.062 . Memory (MB): peak = 830.719 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 763.191 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 763.191 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 830.719 ; gain = 510.004
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 763.191 ; gain = 443.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 830.719 ; gain = 510.004
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 763.191 ; gain = 443.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 830.719 ; gain = 510.004
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 763.191 ; gain = 443.035
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5546] ROM "add" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 830.719 ; gain = 510.004
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 763.191 ; gain = 443.035
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[4].i_delay' (delay__parameterized5) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_cntrl_signals[5].i_delay'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -286,12 +291,41 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_parallel.rfd_int_reg )
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "g_single_rate.i_single_rate/add" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[6]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[7]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[14] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[4].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[14] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[14] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_paths[0].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[14] )
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[3]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[5]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[6]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[8]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[9]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[0]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[1]' (FDR) to 'U0/i_synth/g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_semi_parallel_and_smac.g_accum_cntrl.accum_opcode_reg[2] )
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[29]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[30]'
 INFO: [Synth 8-3886] merging instance 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[30]' (FDRE) to 'U0/i_synth/g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tdata_int_reg[31]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/i_synth/\g_single_rate.i_single_rate/g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 830.719 ; gain = 510.004
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 763.191 ; gain = 443.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -303,13 +337,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 860.250 ; gain = 539.535
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 844.234 ; gain = 524.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 883.496 ; gain = 562.781
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,7 +355,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -345,7 +379,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -358,7 +392,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -370,25 +404,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -401,47 +435,49 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |DSP48E1 |    33|
-|2     |LUT2    |     1|
-|3     |LUT3    |     1|
-|4     |LUT4    |     4|
-|5     |LUT5    |     1|
-|6     |LUT6    |     3|
-|7     |SRL16E  |   392|
-|8     |SRLC32E |   122|
-|9     |FDRE    |   866|
-+------+--------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |DSP48E1   |     4|
+|2     |DSP48E1_1 |     1|
+|3     |LUT1      |     3|
+|4     |LUT2      |    10|
+|5     |LUT3      |    20|
+|6     |LUT4      |    35|
+|7     |LUT5      |     4|
+|8     |LUT6      |     6|
+|9     |SRL16E    |    90|
+|10    |FDRE      |   276|
+|11    |FDSE      |     1|
++------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 888.027 ; gain = 567.312
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 671 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 888.027 ; gain = 332.051
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 888.027 ; gain = 567.312
+Synthesis finished with 0 errors, 0 critical warnings and 96 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 865.004 ; gain = 356.012
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 865.004 ; gain = 544.848
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 888.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 865.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+56 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 888.027 ; gain = 578.812
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 888.027 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 865.004 ; gain = 556.344
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 865.004 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/fir.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir, cache-ID = 6fd43e1499f72610
-INFO: [Coretcl 2-1174] Renamed 234 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 888.027 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fir, cache-ID = 56c80972d34edd4a
+INFO: [Coretcl 2-1174] Renamed 47 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 865.004 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/fir.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file fir_utilization_synth.rpt -pb fir_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 15:38:06 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 17:05:38 2025...

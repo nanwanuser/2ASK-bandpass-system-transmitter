@@ -167,6 +167,9 @@ begin
         end loop;
         ip_count := ip_count + 1;
         wait for T_HOLD;
+      -- Input rate is 1 input each 10 clock cycles: drive valid inputs at this rate
+        s_axis_data_tvalid <= '0';
+        wait for CLOCK_PERIOD * 9;
         exit when ip_count >= samples;
       end loop;
     end procedure drive_data;
@@ -180,7 +183,7 @@ begin
 
     -- Procedure to drive an impulse and let the impulse response emerge on the data master channel
     -- samples is the number of input samples to drive; default is enough for impulse response output to emerge
-    procedure drive_impulse ( samples : natural := 110 ) is
+    procedure drive_impulse ( samples : natural := 79 ) is
       variable impulse : std_logic_vector(7 downto 0);
     begin
       impulse := (others => '0');  -- initialize unused bits to zero
@@ -203,8 +206,11 @@ begin
     -- Drive another impulse, during which demonstrate use and effect of AXI handshaking signals
     drive_impulse(2);  -- start of impulse; data is now zero
     s_axis_data_tvalid <= '0';
-    wait for CLOCK_PERIOD * 5;  -- provide no data for 5 input samples worth
-    drive_zeros(108);  -- back to normal operation
+    wait for CLOCK_PERIOD * 50;  -- provide no data for 5 input samples worth
+    drive_zeros(2);  -- 2 normal input samples
+    s_axis_data_tvalid <= '1';
+    wait for CLOCK_PERIOD * 50;  -- provide data as fast as the core can accept it for 5 input samples worth
+    drive_zeros(70);  -- back to normal operation
 
     -- End of test
     report "Not a real failure. Simulation finished successfully. Test completed successfully" severity failure;

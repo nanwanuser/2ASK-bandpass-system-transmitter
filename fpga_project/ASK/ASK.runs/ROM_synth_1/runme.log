@@ -14,11 +14,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 45648 
+INFO: Helper process launched with PID 49204 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 422.809 ; gain = 102.395
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 422.832 ; gain = 103.070
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/synth/ROM.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/synth/ROM.vhd:67]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -43,7 +43,7 @@ INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Desktop/2ASK_FPGA/2ASK-bandpas
 	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
 	Parameter C_RSTRAM_A bound to: 0 - type: integer 
 	Parameter C_INITA_VAL bound to: 0 - type: string 
-	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
 	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
 	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
@@ -94,8 +94,8 @@ INFO: [Synth 8-638] synthesizing module 'ROM' [d:/Desktop/2ASK_FPGA/2ASK-bandpas
 	Parameter C_COUNT_36K_BRAM bound to: 16 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.149749 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_2' declared at 'd:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_2' [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/synth/ROM.vhd:232]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (11#1) [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/synth/ROM.vhd:68]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_2' declared at 'd:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_2' [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/synth/ROM.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (11#1) [d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/synth/ROM.vhd:67]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_LAT_RST
 WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REG_RST
@@ -198,7 +198,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port ADDR_IN[14]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port ADDR_IN[13]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 700.242 ; gain = 379.828
+Finished RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 694.699 ; gain = 374.938
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,10 +211,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 700.242 ; gain = 379.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 694.699 ; gain = 374.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 700.242 ; gain = 379.828
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 694.699 ; gain = 374.938
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -229,31 +229,31 @@ Parsing XDC File [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_pro
 Finished Parsing XDC File [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/ROM_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 792.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.863 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 792.012 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 793.555 ; gain = 1.543
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 787.863 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 789.141 ; gain = 1.277
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 793.555 ; gain = 473.141
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 789.141 ; gain = 469.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 793.555 ; gain = 473.141
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 789.141 ; gain = 469.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/ROM_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 793.555 ; gain = 473.141
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 789.141 ; gain = 469.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 793.555 ; gain = 473.141
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 789.141 ; gain = 469.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -308,8 +308,40 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ENOUT" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 793.555 ; gain = 473.141
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 789.141 ; gain = 469.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,13 +353,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 831.543 ; gain = 511.129
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 824.527 ; gain = 504.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 832.902 ; gain = 512.488
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 826.148 ; gain = 506.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -339,7 +371,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,7 +395,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -376,7 +408,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,25 +420,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -422,7 +454,7 @@ Report Cell Usage:
 +------+------------+------+
 |      |Cell        |Count |
 +------+------------+------+
-|1     |LUT4        |     8|
+|1     |LUT3        |     8|
 |2     |LUT6        |     2|
 |3     |MUXF7       |     1|
 |4     |RAMB36E1    |     1|
@@ -472,33 +504,33 @@ Report Instance Areas:
 |22    |            \prim_init.ram                   |blk_mem_gen_prim_wrapper_init__parameterized6 |     2|
 +------+---------------------------------------------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 144 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:58 . Memory (MB): peak = 843.906 ; gain = 430.180
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 843.906 ; gain = 523.492
+Synthesis finished with 0 errors, 0 critical warnings and 145 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:47 . Memory (MB): peak = 837.074 ; gain = 422.871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 837.074 ; gain = 517.312
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 855.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 848.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-17 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+49 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:05 . Memory (MB): peak = 855.805 ; gain = 546.902
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 855.805 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 848.664 ; gain = 540.426
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 848.664 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/ROM_synth_1/ROM.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ROM, cache-ID = cb980cfcd1978a00
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ROM, cache-ID = 1d6c12638b14f0ad
 INFO: [Coretcl 2-1174] Renamed 21 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 855.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 848.664 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/ROM_synth_1/ROM.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ROM_utilization_synth.rpt -pb ROM_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun 24 17:26:14 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 16:06:24 2025...
