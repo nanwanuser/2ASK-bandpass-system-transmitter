@@ -1,36 +1,31 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name: top_2ask_transmitter
-// Description: 2ASK调制器顶层模块（V4.0 - Control Signal Timing模式）
+// Description: 2ASK调制器顶层模块（AD9767高速DAC版本 - 20MHz采样率）
 // 
-// 主要修改：
-// 1. 使用Control Signal Timing模式，严格控制时序
-// 2. 大幅降低DAC更新速率，确保时序要求
-// 3. 简化设计，对载波质量要求不高
+// 主要特性：
+// 1. 使用AD9767 14位125MSPS高速DAC
+// 2. 载波频率1MHz，采样率20MHz（每周期20个采样点）
+// 3. 电路板上CLK和WRT连接在一起，简化了时序控制
+// 4. MODE和SLEEP由扩展板电路控制
 //////////////////////////////////////////////////////////////////////////////////
-
 module top_2ask_transmitter(
     input wire clk,                  // 100MHz系统时钟
     input wire rst_n,                // 复位信号，低有效
     
-    // DAC接口
-    output wire [7:0] dac_data,      // DAC数据
-    output wire dac_cs_n,            // DAC片选
-    output wire dac_wr1_n,           // DAC写信号1
-    output wire dac_wr2_n,           // DAC写信号2
-    output wire dac_xfer_n,          // DAC传送信号
-    output wire dac_ile              // DAC输入锁存使能
+    // AD9767 DAC接口 - 使用扩展板引脚
+    output reg [13:0] p2_db,         // DAC数据总线（14位）
+    output reg p2_clk_wrt            // DAC时钟和写信号（连在一起）
 );
-
 // 参数定义
 parameter CLK_FREQ = 100_000_000;                 // 系统时钟频率 100MHz
-parameter SYMBOL_RATE = 100_000;               // 仿真时可以使用更高的码元速率
+parameter DAC_SAMPLE_RATE = 20_000_000;           // DAC采样率 20MHz
 //parameter SYMBOL_RATE = 1_000;                    // 码元速率 1KHz
+parameter SYMBOL_RATE = 100_000;                    // 仿真码元速率 100KHz
 parameter SYMBOL_PERIOD = CLK_FREQ / SYMBOL_RATE; // 每个码元的时钟周期数
 
 // 内部信号
 reg [18:0] rom_addr;
 wire rom_data;
-
 reg [19:0] symbol_counter;           // 码元计数器
 reg symbol_clk_en;                   // 码元时钟使能信号
 
@@ -38,22 +33,19 @@ reg symbol_clk_en;                   // 码元时钟使能信号
 reg fir_data_valid;
 reg [7:0] fir_data_in;
 wire fir_out_valid;
-wire [31:0] fir_data_out;           // 32位，Full Precision输出
+wire [31:0] fir_data_out;
 
 // DDS信号
-wire [7:0] dds_data;
+wire [13:0] dds_data;
 
 // 调制相关信号
-reg [7:0] modulated_signal;
-reg modulation_enable;               // 调制使能信号
-wire [7:0] dds_data_unsigned;        // 无符号的DDS数据
+reg [13:0] modulated_signal;
+reg modulation_enable;
+wire [13:0] dds_data_unsigned;
 
-// DAC更新控制
-// 为了满足时序要求，大幅降低更新速率
-// 使用256分频，约390.625KHz的DAC更新率
-// 对于535KHz载波，这会产生类似三角波的效果，但满足要求
-reg [7:0] dac_update_counter;
-reg dac_update_trigger;
+// DAC时钟分频相关信号（100MHz -> 20MHz，5分频）
+reg [2:0] dac_clk_counter;          // 分频计数器
+reg dac_update_en;                  // DAC更新使能
 
 // ROM地址和使能控制
 always @(posedge clk or negedge rst_n) begin
@@ -106,48 +98,52 @@ always @(posedge clk or negedge rst_n) begin
     end
 end
 
-// DDS有符号数据转换为无符号数据
-assign dds_data_unsigned = dds_data + 8'd128;
+// DDS有符号数据转换为无符号数据（14位）
+assign dds_data_unsigned = dds_data + 14'd8192;
 
 // 2ASK键控调制
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        modulated_signal <= 8'd0;  // DAC中间值
+        modulated_signal <= 14'd8192;  // DAC中间值
     end else begin
         // 根据调制使能信号决定输出
         if (modulation_enable) begin
             modulated_signal <= dds_data_unsigned;     // 输出载波
         end else begin
-            modulated_signal <= 8'd0;               // 输出直流偏置（无载波）
+            modulated_signal <= 14'd8192;              // 输出中间电平（无载波）
         end
     end
 end
 
-// DAC更新触发生成
-// 每256个时钟周期触发一次DAC更新
+// DAC时钟分频器（100MHz -> 20MHz）
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        dac_update_counter <= 8'd0;
-        dac_update_trigger <= 1'b0;
+        dac_clk_counter <= 3'd0;
+        dac_update_en <= 1'b0;
+        p2_clk_wrt <= 1'b0;
     end else begin
-        dac_update_counter <= dac_update_counter + 1'b1;
-        dac_update_trigger <= (dac_update_counter == 8'd255);
+        if (dac_clk_counter >= 3'd4) begin
+            dac_clk_counter <= 3'd0;
+            dac_update_en <= 1'b1;
+            p2_clk_wrt <= ~p2_clk_wrt;  // 每5个时钟周期翻转一次，产生20MHz时钟
+        end else begin
+            dac_clk_counter <= dac_clk_counter + 1'b1;
+            dac_update_en <= 1'b0;
+        end
     end
 end
 
-// DAC控制器实例化
-dac_controller u_dac_controller (
-    .clk(clk),
-    .rst_n(rst_n),
-    .data_in(modulated_signal),
-    .data_valid(dac_update_trigger),
-    .dac_data(dac_data),
-    .dac_cs_n(dac_cs_n),
-    .dac_wr1_n(dac_wr1_n),
-    .dac_wr2_n(dac_wr2_n),
-    .dac_xfer_n(dac_xfer_n),
-    .dac_ile(dac_ile)
-);
+// DAC数据输出 - 在20MHz速率下更新
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        p2_db <= 14'd8192;
+    end else begin
+        if (dac_update_en) begin
+            // 数据在使能信号有效时更新
+            p2_db <= modulated_signal;
+        end
+    end
+end
 
 // ROM实例化
 ROM u_rom (
@@ -165,7 +161,7 @@ fir u_fir (
     .m_axis_data_tdata(fir_data_out)
 );
 
-// DDS实例化
+// DDS实例化 - 生成1MHz载波
 dds u_dds (
     .aclk(clk),
     .m_axis_data_tdata(dds_data)

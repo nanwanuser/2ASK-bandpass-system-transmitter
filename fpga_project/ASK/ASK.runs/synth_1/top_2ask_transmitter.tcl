@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,19 +34,16 @@ set_property ip_output_repo d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitte
 set_property ip_cache_permissions {read write} [current_project]
 add_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/Parameters/FIR.coe
 add_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/Parameters/scrambled_data_1bit.coe
-read_verilog -library xil_defaultlib {
-  D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v
-  D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v
-}
-read_ip -quiet D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/dds.xci
-set_property used_in_implementation false [get_files -all d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/dds_ooc.xdc]
-
+read_verilog -library xil_defaultlib D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v
 read_ip -quiet D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/ROM.xci
 set_property used_in_implementation false [get_files -all d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/ROM_ooc.xdc]
 
 read_ip -quiet D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci
 set_property used_in_implementation false [get_files -all d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/constraints/fir_compiler_v7_2.xdc]
 set_property used_in_implementation false [get_files -all d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir_ooc.xdc]
+
+read_ip -quiet D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/dds.xci
+set_property used_in_implementation false [get_files -all d:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/dds_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

@@ -1,18 +1,16 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Module Name: tb_2ask_transmitter
+// Description: 测试平台
+//////////////////////////////////////////////////////////////////////////////////
 `timescale 1ns / 1ps
-
 module tb_2ask_transmitter;
-
 // 时钟和复位
 reg clk;
 reg rst_n;
 
 // DAC接口信号
-wire [7:0] dac_data;
-wire dac_cs_n;
-wire dac_wr1_n;
-wire dac_wr2_n;
-wire dac_xfer_n;
-wire dac_ile;
+wire [13:0] p2_db;
+wire p2_clk_wrt;
 
 // 参数定义
 parameter CLK_PERIOD = 10;  // 100MHz时钟周期为10ns
@@ -21,12 +19,8 @@ parameter CLK_PERIOD = 10;  // 100MHz时钟周期为10ns
 top_2ask_transmitter uut (
     .clk(clk),
     .rst_n(rst_n),
-    .dac_data(dac_data),
-    .dac_cs_n(dac_cs_n),
-    .dac_wr1_n(dac_wr1_n),
-    .dac_wr2_n(dac_wr2_n),
-    .dac_xfer_n(dac_xfer_n),
-    .dac_ile(dac_ile)
+    .p2_db(p2_db),
+    .p2_clk_wrt(p2_clk_wrt)
 );
 
 // 时钟生成
@@ -51,56 +45,41 @@ initial begin
     $finish;
 end
 
-// 监控DAC控制信号时序
-integer wr1_falling_edge_time;
-integer wr1_rising_edge_time;
-
-always @(negedge dac_wr1_n) begin
-    wr1_falling_edge_time = $time;
-    $display("Time=%0t: WR1 falling edge (write started)", $time);
+// 监控DAC时钟频率
+integer clk_edge_count;
+integer start_time;
+always @(posedge p2_clk_wrt) begin
+    if (clk_edge_count == 0) begin
+        start_time = $time;
+    end
+    clk_edge_count = clk_edge_count + 1;
+    if (clk_edge_count == 10000) begin  // 增加计数以提高精度
+        $display("DAC clock frequency: %f MHz", 
+                 10000.0 * 1000.0 / ($time - start_time));
+        clk_edge_count = 0;
+    end
 end
 
-always @(posedge dac_wr1_n) begin
-    wr1_rising_edge_time = $time;
-    $display("Time=%0t: WR1 rising edge (write completed), pulse width=%0dns", 
-             $time, wr1_rising_edge_time - wr1_falling_edge_time);
-end
-
-// 监控CS信号
-always @(negedge dac_cs_n) begin
-    $display("Time=%0t: CS asserted (chip selected)", $time);
-end
-
-always @(posedge dac_cs_n) begin
-    $display("Time=%0t: CS deasserted (chip deselected)", $time);
-end
-
-// 检查固定控制信号
 initial begin
-    #200; // 等待复位完成
-    
-    if (dac_wr2_n !== 1'b0) $display("ERROR: dac_wr2_n should be 0 for single-buffer mode");
-    if (dac_xfer_n !== 1'b0) $display("ERROR: dac_xfer_n should be 0 for single-buffer mode");
-    if (dac_ile !== 1'b1) $display("ERROR: dac_ile should be 1");
-    
-    $display("DAC configured in Control Signal Timing mode");
+    clk_edge_count = 0;
 end
 
 // 监控DAC数据变化
-reg [7:0] last_dac_data;
+reg [13:0] last_dac_data;
 integer data_change_count;
-
 initial begin
-    last_dac_data = 8'd0;
+    last_dac_data = 14'd0;
     data_change_count = 0;
 end
 
-always @(dac_data) begin
-    if (dac_data !== last_dac_data) begin
+always @(p2_db) begin
+    if (p2_db !== last_dac_data) begin
         data_change_count = data_change_count + 1;
-        $display("Time=%0t: DAC data changed from %h to %h (change #%0d)", 
-                 $time, last_dac_data, dac_data, data_change_count);
-        last_dac_data = dac_data;
+        if (data_change_count % 10000 == 0) begin  // 每10000次变化打印一次（100MHz下减少打印频率）
+            $display("Time=%0t: DAC data=%h (change #%0d)", 
+                     $time, p2_db, data_change_count);
+        end
+        last_dac_data = p2_db;
     end
 end
 
@@ -113,6 +92,6 @@ initial begin
     $dumpvars(1, uut.modulated_signal);
     $dumpvars(1, uut.modulation_enable);
     $dumpvars(1, uut.dds_data);
+    $dumpvars(1, uut.dds_data_unsigned);
 end
-
 endmodule

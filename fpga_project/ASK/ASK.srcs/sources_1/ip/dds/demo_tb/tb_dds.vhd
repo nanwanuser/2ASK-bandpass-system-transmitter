@@ -92,7 +92,7 @@ architecture tb of tb_dds is
 
   -- Data master channel signals
   signal m_axis_data_tvalid              : std_logic := '0';  -- payload is valid
-  signal m_axis_data_tdata               : std_logic_vector(7 downto 0) := (others => '0');  -- data payload
+  signal m_axis_data_tdata               : std_logic_vector(15 downto 0) := (others => '0');  -- data payload
 
   -- Phase master channel signals
   signal m_axis_phase_tvalid             : std_logic := '0';  -- payload is valid
@@ -106,7 +106,7 @@ architecture tb of tb_dds is
   -----------------------------------------------------------------------
 
   -- Data master channel alias signals
-  signal m_axis_data_tdata_sine        : std_logic_vector(7 downto 0) := (others => '0');
+  signal m_axis_data_tdata_sine        : std_logic_vector(13 downto 0) := (others => '0');
 
   -- Phase master channel alias signals
   signal m_axis_phase_tdata_phase      : std_logic_vector(26 downto 0) := (others => '0');
@@ -161,7 +161,7 @@ begin
     wait for T_HOLD;
 
     -- Run for long enough to produce 5 periods of outputs
-    wait for CLOCK_PERIOD * 935;
+    wait for CLOCK_PERIOD * 501;
 
     -- End of test
     end_of_simulation <= true;           
@@ -213,7 +213,7 @@ begin
   -----------------------------------------------------------------------
 
   -- Data master channel alias signals: update these only when they are valid
-  m_axis_data_tdata_sine        <= m_axis_data_tdata(7 downto 0) when m_axis_data_tvalid = '1';
+  m_axis_data_tdata_sine        <= m_axis_data_tdata(13 downto 0) when m_axis_data_tvalid = '1';
 
   -- Phase master channel alias signals: update these only when they are valid
   m_axis_phase_tdata_phase      <= m_axis_phase_tdata(26 downto 0) when m_axis_phase_tvalid = '1';

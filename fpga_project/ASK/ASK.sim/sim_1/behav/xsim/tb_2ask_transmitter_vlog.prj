@@ -1,7 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../ASK.srcs/sources_1/ip/ROM/sim/ROM.v" \
-"../../../../ASK.srcs/sources_1/new/dac_controller.v" \
 "../../../../ASK.srcs/sources_1/new/top_2ask_transmitter.v" \
 "../../../../ASK.srcs/sim_1/new/tb_2ask_transmitter.v" \
 

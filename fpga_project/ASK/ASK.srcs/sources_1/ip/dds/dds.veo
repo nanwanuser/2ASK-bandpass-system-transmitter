@@ -57,7 +57,7 @@
 dds your_instance_name (
   .aclk(aclk),                                // input wire aclk
   .m_axis_data_tvalid(m_axis_data_tvalid),    // output wire m_axis_data_tvalid
-  .m_axis_data_tdata(m_axis_data_tdata),      // output wire [7 : 0] m_axis_data_tdata
+  .m_axis_data_tdata(m_axis_data_tdata),      // output wire [15 : 0] m_axis_data_tdata
   .m_axis_phase_tvalid(m_axis_phase_tvalid),  // output wire m_axis_phase_tvalid
   .m_axis_phase_tdata(m_axis_phase_tdata)    // output wire [31 : 0] m_axis_phase_tdata
 );

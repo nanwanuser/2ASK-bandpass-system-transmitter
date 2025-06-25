@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="36829166666fs"></ZoomStartTime>
-      <ZoomEndTime time="233834166667fs"></ZoomEndTime>
-      <Cursor1Time time="201000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="200000000001fs"></ZoomEndTime>
+      <Cursor1Time time="67285000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="11" />
    <wvobject fp_name="/tb_2ask_transmitter/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -27,30 +27,6 @@
    <wvobject fp_name="/tb_2ask_transmitter/rst_n" type="logic">
       <obj_property name="ElementShortName">rst_n</obj_property>
       <obj_property name="ObjectShortName">rst_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_data" type="array">
-      <obj_property name="ElementShortName">dac_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dac_data[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_cs_n" type="logic">
-      <obj_property name="ElementShortName">dac_cs_n</obj_property>
-      <obj_property name="ObjectShortName">dac_cs_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_wr1_n" type="logic">
-      <obj_property name="ElementShortName">dac_wr1_n</obj_property>
-      <obj_property name="ObjectShortName">dac_wr1_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_wr2_n" type="logic">
-      <obj_property name="ElementShortName">dac_wr2_n</obj_property>
-      <obj_property name="ObjectShortName">dac_wr2_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_xfer_n" type="logic">
-      <obj_property name="ElementShortName">dac_xfer_n</obj_property>
-      <obj_property name="ObjectShortName">dac_xfer_n</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_ile" type="logic">
-      <obj_property name="ElementShortName">dac_ile</obj_property>
-      <obj_property name="ObjectShortName">dac_ile</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_2ask_transmitter/CLK_PERIOD" type="array">
       <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
@@ -76,20 +52,25 @@
       <obj_property name="ObjectShortName">modulation_enable</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_2ask_transmitter/uut/dds_data_unsigned" type="array">
-      <obj_property name="ElementShortName">dds_data_unsigned[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dds_data_unsigned[7:0]</obj_property>
+      <obj_property name="ElementShortName">dds_data_unsigned[13:0]</obj_property>
+      <obj_property name="ObjectShortName">dds_data_unsigned[13:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_2ask_transmitter/uut/modulated_signal" type="array">
-      <obj_property name="ElementShortName">modulated_signal[7:0]</obj_property>
-      <obj_property name="ObjectShortName">modulated_signal[7:0]</obj_property>
+      <obj_property name="ElementShortName">modulated_signal[13:0]</obj_property>
+      <obj_property name="ObjectShortName">modulated_signal[13:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_2ask_transmitter/dac_data" type="array">
-      <obj_property name="ElementShortName">dac_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dac_data[7:0]</obj_property>
+   <wvobject fp_name="/tb_2ask_transmitter/uut/p2_clk_wrt" type="logic">
+      <obj_property name="ElementShortName">p2_clk_wrt</obj_property>
+      <obj_property name="ObjectShortName">p2_clk_wrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_2ask_transmitter/uut/p2_db" type="array">
+      <obj_property name="ElementShortName">p2_db[13:0]</obj_property>
+      <obj_property name="ObjectShortName">p2_db[13:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
    </wvobject>
