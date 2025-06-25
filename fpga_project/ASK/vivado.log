@@ -581,3 +581,903 @@ fir_synth_1: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/
 [Wed Jun 25 20:01:09 2025] Launched synth_1...
 Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/runme.log
 launch_runs: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1312.430 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_2ask_transmitter' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/ROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/scrambled_data_1bit.coe'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/fir.mif'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/FIR.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_2ask_transmitter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/sim/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dac_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
+"xvhdl --incr --relax -prj tb_2ask_transmitter_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/sim/fir.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1845c764a1847ad96e089803310f14b --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L dds_compiler_v6_0_17 -L xil_defaultlib -L fir_compiler_v7_2_11 -L blk_mem_gen_v8_4_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_2ask_transmitter_behav xil_defaultlib.tb_2ask_transmitter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xbip_utils_v3_0_9.xcc_utils_v3_0
+Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv_comp
+Compiling package dds_compiler_v6_0_17.pkg_dds_compiler_v6_0_17
+Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_hdl_comps
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.std_logic_unsigned
+Compiling package dds_compiler_v6_0_17.pkg_betas
+Compiling package dds_compiler_v6_0_17.pkg_alphas
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.ROM
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=32,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=31,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=30,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=29,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=28,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=27,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=26,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=25,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=24,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=23,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=22,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=21,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=20,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=19,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=18,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=17,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=16,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=15,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=12,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=11,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=37,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate [\single_rate(c_xdevicefamily="ar...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_arch of entity xil_defaultlib.fir [fir_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_rdy [\dds_compiler_v6_0_17_rdy(c_has_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.pipe_add [\pipe_add(c_width=27,c_seg_width...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.accum [\accum(c_xdevicefamily="artix7",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.sin_cos [\sin_cos(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_core [\dds_compiler_v6_0_17_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv [\dds_compiler_v6_0_17_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17 [\dds_compiler_v6_0_17(c_xdevicef...]
+Compiling architecture dds_arch of entity xil_defaultlib.dds [dds_default]
+Compiling module xil_defaultlib.dac_controller
+Compiling module xil_defaultlib.top_2ask_transmitter_default
+Compiling module xil_defaultlib.tb_2ask_transmitter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_2ask_transmitter_behav
+run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:02:11 . Memory (MB): peak = 1312.430 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '131' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_2ask_transmitter_behav -key {Behavioral:sim_1:Functional:tb_2ask_transmitter} -tclbatch {tb_2ask_transmitter.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_2ask_transmitter.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Time=0: DAC transaction completed, Data=80
+Time=125000: DAC transaction started
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_2ask_transmitter_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:02:19 . Memory (MB): peak = 1312.430 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 us
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Time=0: DAC transaction completed, Data=80
+Time=125000: DAC transaction started
+Time=2175000: DAC transaction completed, Data=80
+Time=2205000: DAC transaction started
+Time=4255000: DAC transaction completed, Data=80
+Time=4285000: DAC transaction started
+Time=6335000: DAC transaction completed, Data=80
+Time=6365000: DAC transaction started
+Time=8415000: DAC transaction completed, Data=80
+Time=8445000: DAC transaction started
+Time=10495000: DAC transaction completed, Data=80
+Time=10525000: DAC transaction started
+Time=12575000: DAC transaction completed, Data=80
+Time=12605000: DAC transaction started
+Time=14655000: DAC transaction completed, Data=80
+Time=14685000: DAC transaction started
+Time=16735000: DAC transaction completed, Data=80
+Time=16765000: DAC transaction started
+Time=18815000: DAC transaction completed, Data=80
+Time=18845000: DAC transaction started
+Time=20895000: DAC transaction completed, Data=80
+Time=20925000: DAC transaction started
+Time=22975000: DAC transaction completed, Data=80
+Time=23005000: DAC transaction started
+Time=25055000: DAC transaction completed, Data=80
+Time=25085000: DAC transaction started
+Time=27135000: DAC transaction completed, Data=80
+Time=27165000: DAC transaction started
+Time=29215000: DAC transaction completed, Data=80
+Time=29245000: DAC transaction started
+Time=31295000: DAC transaction completed, Data=80
+Time=31325000: DAC transaction started
+Time=33375000: DAC transaction completed, Data=80
+Time=33405000: DAC transaction started
+Time=35455000: DAC transaction completed, Data=80
+Time=35485000: DAC transaction started
+Time=37535000: DAC transaction completed, Data=80
+Time=37565000: DAC transaction started
+Time=39615000: DAC transaction completed, Data=80
+Time=39645000: DAC transaction started
+Time=41695000: DAC transaction completed, Data=80
+Time=41725000: DAC transaction started
+Time=43775000: DAC transaction completed, Data=f9
+Time=43805000: DAC transaction started
+Time=45855000: DAC transaction completed, Data=c7
+Time=45885000: DAC transaction started
+Time=47935000: DAC transaction completed, Data=72
+Time=47965000: DAC transaction started
+Time=50015000: DAC transaction completed, Data=24
+Time=50045000: DAC transaction started
+Time=52095000: DAC transaction completed, Data=02
+Time=52125000: DAC transaction started
+Time=54175000: DAC transaction completed, Data=1e
+Time=54205000: DAC transaction started
+Time=56255000: DAC transaction completed, Data=69
+Time=56285000: DAC transaction started
+Time=58335000: DAC transaction completed, Data=bf
+Time=58365000: DAC transaction started
+Time=60415000: DAC transaction completed, Data=f7
+Time=60445000: DAC transaction started
+Time=62495000: DAC transaction completed, Data=f5
+Time=62525000: DAC transaction started
+Time=64575000: DAC transaction completed, Data=80
+Time=64605000: DAC transaction started
+Time=66655000: DAC transaction completed, Data=80
+Time=66685000: DAC transaction started
+Time=68735000: DAC transaction completed, Data=80
+Time=68765000: DAC transaction started
+Time=70815000: DAC transaction completed, Data=80
+Time=70845000: DAC transaction started
+Time=72895000: DAC transaction completed, Data=80
+Time=72925000: DAC transaction started
+Time=74975000: DAC transaction completed, Data=75
+Time=75005000: DAC transaction started
+Time=77055000: DAC transaction completed, Data=ca
+Time=77085000: DAC transaction started
+Time=79135000: DAC transaction completed, Data=fb
+Time=79165000: DAC transaction started
+Time=81215000: DAC transaction completed, Data=f1
+Time=81245000: DAC transaction started
+Time=83295000: DAC transaction completed, Data=80
+Time=83325000: DAC transaction started
+Time=85375000: DAC transaction completed, Data=80
+Time=85405000: DAC transaction started
+Time=87455000: DAC transaction completed, Data=80
+Time=87485000: DAC transaction started
+Time=89535000: DAC transaction completed, Data=80
+Time=89565000: DAC transaction started
+Time=91615000: DAC transaction completed, Data=80
+Time=91645000: DAC transaction started
+Time=93695000: DAC transaction completed, Data=82
+Time=93725000: DAC transaction started
+Time=95775000: DAC transaction completed, Data=d3
+Time=95805000: DAC transaction started
+Time=97855000: DAC transaction completed, Data=fc
+Time=97885000: DAC transaction started
+Time=99935000: DAC transaction completed, Data=eb
+Time=99965000: DAC transaction started
+Time=102015000: DAC transaction completed, Data=a6
+Time=102045000: DAC transaction started
+Time=104095000: DAC transaction completed, Data=80
+Time=104125000: DAC transaction started
+Time=106175000: DAC transaction completed, Data=80
+Time=106205000: DAC transaction started
+Time=108255000: DAC transaction completed, Data=80
+Time=108285000: DAC transaction started
+Time=110335000: DAC transaction completed, Data=80
+Time=110365000: DAC transaction started
+Time=112415000: DAC transaction completed, Data=80
+Time=112445000: DAC transaction started
+Time=114495000: DAC transaction completed, Data=80
+Time=114525000: DAC transaction started
+Time=116575000: DAC transaction completed, Data=80
+Time=116605000: DAC transaction started
+Time=118655000: DAC transaction completed, Data=80
+Time=118685000: DAC transaction started
+Time=120735000: DAC transaction completed, Data=80
+Time=120765000: DAC transaction started
+Time=122815000: DAC transaction completed, Data=80
+Time=122845000: DAC transaction started
+Time=124895000: DAC transaction completed, Data=0a
+Time=124925000: DAC transaction started
+Time=126975000: DAC transaction completed, Data=0a
+Time=127005000: DAC transaction started
+Time=129055000: DAC transaction completed, Data=43
+Time=129085000: DAC transaction started
+Time=131135000: DAC transaction completed, Data=97
+Time=131165000: DAC transaction started
+Time=133215000: DAC transaction completed, Data=80
+Time=133245000: DAC transaction started
+Time=135295000: DAC transaction completed, Data=80
+Time=135325000: DAC transaction started
+Time=137375000: DAC transaction completed, Data=80
+Time=137405000: DAC transaction started
+Time=139455000: DAC transaction completed, Data=80
+Time=139485000: DAC transaction started
+Time=141535000: DAC transaction completed, Data=80
+Time=141565000: DAC transaction started
+Time=143615000: DAC transaction completed, Data=06
+Time=143645000: DAC transaction started
+Time=145695000: DAC transaction completed, Data=0f
+Time=145725000: DAC transaction started
+Time=147775000: DAC transaction completed, Data=4c
+Time=147805000: DAC transaction started
+Time=149855000: DAC transaction completed, Data=a3
+Time=149885000: DAC transaction started
+Time=151935000: DAC transaction completed, Data=ea
+Time=151965000: DAC transaction started
+Time=154015000: DAC transaction completed, Data=fd
+Time=154045000: DAC transaction started
+Time=156095000: DAC transaction completed, Data=d3
+Time=156125000: DAC transaction started
+Time=158175000: DAC transaction completed, Data=82
+Time=158205000: DAC transaction started
+Time=160255000: DAC transaction completed, Data=2f
+Time=160285000: DAC transaction started
+Time=162335000: DAC transaction completed, Data=04
+Time=162365000: DAC transaction started
+Time=164415000: DAC transaction completed, Data=13
+Time=164445000: DAC transaction started
+Time=166495000: DAC transaction completed, Data=57
+Time=166525000: DAC transaction started
+Time=168575000: DAC transaction completed, Data=af
+Time=168605000: DAC transaction started
+Time=170655000: DAC transaction completed, Data=f0
+Time=170685000: DAC transaction started
+Time=172735000: DAC transaction completed, Data=80
+Time=172765000: DAC transaction started
+Time=174815000: DAC transaction completed, Data=80
+Time=174845000: DAC transaction started
+Time=176895000: DAC transaction completed, Data=80
+Time=176925000: DAC transaction started
+Time=178975000: DAC transaction completed, Data=80
+Time=179005000: DAC transaction started
+Time=181055000: DAC transaction completed, Data=80
+Time=181085000: DAC transaction started
+Time=183135000: DAC transaction completed, Data=80
+Time=183165000: DAC transaction started
+Time=185215000: DAC transaction completed, Data=63
+Time=185245000: DAC transaction started
+Time=187295000: DAC transaction completed, Data=ba
+Time=187325000: DAC transaction started
+Time=189375000: DAC transaction completed, Data=f5
+Time=189405000: DAC transaction started
+Time=191455000: DAC transaction completed, Data=f7
+Time=191485000: DAC transaction started
+Time=193535000: DAC transaction completed, Data=bf
+Time=193565000: DAC transaction started
+Time=195615000: DAC transaction completed, Data=69
+Time=195645000: DAC transaction started
+Time=197695000: DAC transaction completed, Data=20
+Time=197725000: DAC transaction started
+Time=199775000: DAC transaction completed, Data=02
+Time=199805000: DAC transaction started
+set_property -dict [list CONFIG.Coefficient_File {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/Parameters/FIR.coe} CONFIG.Sample_Frequency {10} CONFIG.Coefficient_Sign {Unsigned} CONFIG.Coefficient_Sets {1} CONFIG.Clock_Frequency {100} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {8} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {30} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {4}] [get_ips fir]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/Parameters/FIR.coe' provided. It will be converted relative to IP Instance files '../../../../../Parameters/FIR.coe'
+generate_target all [get_files  D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir'...
+INFO: [xilinx.com:ip:fir_compiler:7.2-1] fir: Coefficient Reload not selected, no files generated
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir'...
+catch { config_ip_cache -export [get_ips -all fir] }
+export_ip_user_files -of_objects [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci] -no_script -sync -force -quiet
+reset_run fir_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1
+
+launch_runs -jobs 16 fir_synth_1
+[Wed Jun 25 20:10:49 2025] Launched fir_synth_1...
+Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/runme.log
+export_simulation -of_objects [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci] -directory D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files -ipstatic_source_dir D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/modelsim} {questa=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/questa} {riviera=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/riviera} {activehdl=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_2ask_transmitter' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/ROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/scrambled_data_1bit.coe'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/fir.mif'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/FIR.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_2ask_transmitter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/sim/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dac_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
+"xvhdl --incr --relax -prj tb_2ask_transmitter_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/sim/fir.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1845c764a1847ad96e089803310f14b --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L dds_compiler_v6_0_17 -L xil_defaultlib -L fir_compiler_v7_2_11 -L blk_mem_gen_v8_4_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_2ask_transmitter_behav xil_defaultlib.tb_2ask_transmitter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xbip_utils_v3_0_9.xcc_utils_v3_0
+Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv_comp
+Compiling package dds_compiler_v6_0_17.pkg_dds_compiler_v6_0_17
+Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_hdl_comps
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.std_logic_unsigned
+Compiling package dds_compiler_v6_0_17.pkg_betas
+Compiling package dds_compiler_v6_0_17.pkg_alphas
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.ROM
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.add_accum [\add_accum(c_xdevicefamily="arti...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate [\single_rate(c_xdevicefamily="ar...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_arch of entity xil_defaultlib.fir [fir_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_rdy [\dds_compiler_v6_0_17_rdy(c_has_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.pipe_add [\pipe_add(c_width=27,c_seg_width...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.accum [\accum(c_xdevicefamily="artix7",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.sin_cos [\sin_cos(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_core [\dds_compiler_v6_0_17_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv [\dds_compiler_v6_0_17_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17 [\dds_compiler_v6_0_17(c_xdevicef...]
+Compiling architecture dds_arch of entity xil_defaultlib.dds [dds_default]
+Compiling module xil_defaultlib.dac_controller
+Compiling module xil_defaultlib.top_2ask_transmitter_default
+Compiling module xil_defaultlib.tb_2ask_transmitter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_2ask_transmitter_behav
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:01:49 . Memory (MB): peak = 1332.277 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '110' seconds
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:01:49 . Memory (MB): peak = 1332.277 ; gain = 0.000
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Time=0: DAC transaction completed, Data=80
+Time=125000: DAC transaction started
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:01:57 . Memory (MB): peak = 1332.277 ; gain = 0.000
+run 200 us
+Time=2175000: DAC transaction completed, Data=80
+Time=2205000: DAC transaction started
+Time=4255000: DAC transaction completed, Data=80
+Time=4285000: DAC transaction started
+Time=6335000: DAC transaction completed, Data=80
+Time=6365000: DAC transaction started
+Time=8415000: DAC transaction completed, Data=80
+Time=8445000: DAC transaction started
+Time=10495000: DAC transaction completed, Data=80
+Time=10525000: DAC transaction started
+Time=12575000: DAC transaction completed, Data=80
+Time=12605000: DAC transaction started
+Time=14655000: DAC transaction completed, Data=80
+Time=14685000: DAC transaction started
+Time=16735000: DAC transaction completed, Data=80
+Time=16765000: DAC transaction started
+Time=18815000: DAC transaction completed, Data=80
+Time=18845000: DAC transaction started
+Time=20895000: DAC transaction completed, Data=80
+Time=20925000: DAC transaction started
+Time=22975000: DAC transaction completed, Data=80
+Time=23005000: DAC transaction started
+Time=25055000: DAC transaction completed, Data=80
+Time=25085000: DAC transaction started
+Time=27135000: DAC transaction completed, Data=80
+Time=27165000: DAC transaction started
+Time=29215000: DAC transaction completed, Data=80
+Time=29245000: DAC transaction started
+Time=31295000: DAC transaction completed, Data=80
+Time=31325000: DAC transaction started
+Time=33375000: DAC transaction completed, Data=80
+Time=33405000: DAC transaction started
+Time=35455000: DAC transaction completed, Data=80
+Time=35485000: DAC transaction started
+Time=37535000: DAC transaction completed, Data=80
+Time=37565000: DAC transaction started
+Time=39615000: DAC transaction completed, Data=80
+Time=39645000: DAC transaction started
+Time=41695000: DAC transaction completed, Data=80
+Time=41725000: DAC transaction started
+Time=43775000: DAC transaction completed, Data=80
+Time=43805000: DAC transaction started
+Time=45855000: DAC transaction completed, Data=80
+Time=45885000: DAC transaction started
+Time=47935000: DAC transaction completed, Data=80
+Time=47965000: DAC transaction started
+Time=50015000: DAC transaction completed, Data=24
+Time=50045000: DAC transaction started
+Time=52095000: DAC transaction completed, Data=02
+Time=52125000: DAC transaction started
+Time=54175000: DAC transaction completed, Data=1e
+Time=54205000: DAC transaction started
+Time=56255000: DAC transaction completed, Data=69
+Time=56285000: DAC transaction started
+Time=58335000: DAC transaction completed, Data=bf
+Time=58365000: DAC transaction started
+Time=60415000: DAC transaction completed, Data=f7
+Time=60445000: DAC transaction started
+Time=62495000: DAC transaction completed, Data=f5
+Time=62525000: DAC transaction started
+Time=64575000: DAC transaction completed, Data=bd
+Time=64605000: DAC transaction started
+Time=66655000: DAC transaction completed, Data=80
+Time=66685000: DAC transaction started
+Time=68735000: DAC transaction completed, Data=80
+Time=68765000: DAC transaction started
+Time=70815000: DAC transaction completed, Data=80
+Time=70845000: DAC transaction started
+Time=72895000: DAC transaction completed, Data=80
+Time=72925000: DAC transaction started
+Time=74975000: DAC transaction completed, Data=80
+Time=75005000: DAC transaction started
+Time=77055000: DAC transaction completed, Data=80
+Time=77085000: DAC transaction started
+Time=79135000: DAC transaction completed, Data=fb
+Time=79165000: DAC transaction started
+Time=81215000: DAC transaction completed, Data=f1
+Time=81245000: DAC transaction started
+Time=83295000: DAC transaction completed, Data=b2
+Time=83325000: DAC transaction started
+Time=85375000: DAC transaction completed, Data=80
+Time=85405000: DAC transaction started
+Time=87455000: DAC transaction completed, Data=80
+Time=87485000: DAC transaction started
+Time=89535000: DAC transaction completed, Data=80
+Time=89565000: DAC transaction started
+Time=91615000: DAC transaction completed, Data=80
+Time=91645000: DAC transaction started
+Time=93695000: DAC transaction completed, Data=80
+Time=93725000: DAC transaction started
+Time=95775000: DAC transaction completed, Data=80
+Time=95805000: DAC transaction started
+Time=97855000: DAC transaction completed, Data=80
+Time=97885000: DAC transaction started
+Time=99935000: DAC transaction completed, Data=eb
+Time=99965000: DAC transaction started
+Time=102015000: DAC transaction completed, Data=a6
+Time=102045000: DAC transaction started
+Time=104095000: DAC transaction completed, Data=4e
+Time=104125000: DAC transaction started
+Time=106175000: DAC transaction completed, Data=80
+Time=106205000: DAC transaction started
+Time=108255000: DAC transaction completed, Data=80
+Time=108285000: DAC transaction started
+Time=110335000: DAC transaction completed, Data=80
+Time=110365000: DAC transaction started
+Time=112415000: DAC transaction completed, Data=80
+Time=112445000: DAC transaction started
+Time=114495000: DAC transaction completed, Data=80
+Time=114525000: DAC transaction started
+Time=116575000: DAC transaction completed, Data=80
+Time=116605000: DAC transaction started
+Time=118655000: DAC transaction completed, Data=80
+Time=118685000: DAC transaction started
+Time=120735000: DAC transaction completed, Data=80
+Time=120765000: DAC transaction started
+Time=122815000: DAC transaction completed, Data=80
+Time=122845000: DAC transaction started
+Time=124895000: DAC transaction completed, Data=80
+Time=124925000: DAC transaction started
+Time=126975000: DAC transaction completed, Data=80
+Time=127005000: DAC transaction started
+Time=129055000: DAC transaction completed, Data=43
+Time=129085000: DAC transaction started
+Time=131135000: DAC transaction completed, Data=97
+Time=131165000: DAC transaction started
+Time=133215000: DAC transaction completed, Data=e2
+Time=133245000: DAC transaction started
+Time=135295000: DAC transaction completed, Data=fe
+Time=135325000: DAC transaction started
+Time=137375000: DAC transaction completed, Data=80
+Time=137405000: DAC transaction started
+Time=139455000: DAC transaction completed, Data=80
+Time=139485000: DAC transaction started
+Time=141535000: DAC transaction completed, Data=80
+Time=141565000: DAC transaction started
+Time=143615000: DAC transaction completed, Data=80
+Time=143645000: DAC transaction started
+Time=145695000: DAC transaction completed, Data=80
+Time=145725000: DAC transaction started
+Time=147775000: DAC transaction completed, Data=80
+Time=147805000: DAC transaction started
+Time=149855000: DAC transaction completed, Data=a3
+Time=149885000: DAC transaction started
+Time=151935000: DAC transaction completed, Data=ea
+Time=151965000: DAC transaction started
+Time=154015000: DAC transaction completed, Data=fd
+Time=154045000: DAC transaction started
+Time=156095000: DAC transaction completed, Data=d3
+Time=156125000: DAC transaction started
+Time=158175000: DAC transaction completed, Data=82
+Time=158205000: DAC transaction started
+Time=160255000: DAC transaction completed, Data=2f
+Time=160285000: DAC transaction started
+Time=162335000: DAC transaction completed, Data=04
+Time=162365000: DAC transaction started
+Time=164415000: DAC transaction completed, Data=13
+Time=164445000: DAC transaction started
+Time=166495000: DAC transaction completed, Data=57
+Time=166525000: DAC transaction started
+Time=168575000: DAC transaction completed, Data=af
+Time=168605000: DAC transaction started
+Time=170655000: DAC transaction completed, Data=f0
+Time=170685000: DAC transaction started
+Time=172735000: DAC transaction completed, Data=fb
+Time=172765000: DAC transaction started
+Time=174815000: DAC transaction completed, Data=ca
+Time=174845000: DAC transaction started
+Time=176895000: DAC transaction completed, Data=80
+Time=176925000: DAC transaction started
+Time=178975000: DAC transaction completed, Data=80
+Time=179005000: DAC transaction started
+Time=181055000: DAC transaction completed, Data=80
+Time=181085000: DAC transaction started
+Time=183135000: DAC transaction completed, Data=80
+Time=183165000: DAC transaction started
+Time=185215000: DAC transaction completed, Data=80
+Time=185245000: DAC transaction started
+Time=187295000: DAC transaction completed, Data=80
+Time=187325000: DAC transaction started
+Time=189375000: DAC transaction completed, Data=f5
+Time=189405000: DAC transaction started
+Time=191455000: DAC transaction completed, Data=f7
+Time=191485000: DAC transaction started
+Time=193535000: DAC transaction completed, Data=bf
+Time=193565000: DAC transaction started
+Time=195615000: DAC transaction completed, Data=69
+Time=195645000: DAC transaction started
+Time=197695000: DAC transaction completed, Data=20
+Time=197725000: DAC transaction started
+Time=199775000: DAC transaction completed, Data=02
+Time=199805000: DAC transaction started
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 1332.277 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
