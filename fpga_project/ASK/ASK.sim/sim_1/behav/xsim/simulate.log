@@ -3,4 +3,346 @@ Time resolution is 1 ps
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
 Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Time=0: DAC transaction started
+Time=0: DAC data changed from 00 to 80 (change #1)
+Time=0: CS deasserted (chip deselected)
+Time=0: WR1 rising edge (write completed), pulse width=xns
+DAC configured in Control Signal Timing mode
+Time=2675000: CS asserted (chip selected)
+Time=2875000: WR1 falling edge (write started)
+Time=3875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=4065000: CS deasserted (chip deselected)
+Time=5235000: CS asserted (chip selected)
+Time=5435000: WR1 falling edge (write started)
+Time=6435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=6625000: CS deasserted (chip deselected)
+Time=7795000: CS asserted (chip selected)
+Time=7995000: WR1 falling edge (write started)
+Time=8995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=9185000: CS deasserted (chip deselected)
+Time=10355000: CS asserted (chip selected)
+Time=10555000: WR1 falling edge (write started)
+Time=11555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=11745000: CS deasserted (chip deselected)
+Time=12915000: CS asserted (chip selected)
+Time=13115000: WR1 falling edge (write started)
+Time=14115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=14305000: CS deasserted (chip deselected)
+Time=15475000: CS asserted (chip selected)
+Time=15675000: WR1 falling edge (write started)
+Time=16675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=16865000: CS deasserted (chip deselected)
+Time=18035000: CS asserted (chip selected)
+Time=18235000: WR1 falling edge (write started)
+Time=19235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=19425000: CS deasserted (chip deselected)
+Time=20595000: CS asserted (chip selected)
+Time=20795000: WR1 falling edge (write started)
+Time=21795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=21985000: CS deasserted (chip deselected)
+Time=23155000: CS asserted (chip selected)
+Time=23355000: WR1 falling edge (write started)
+Time=24355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=24545000: CS deasserted (chip deselected)
+Time=25715000: CS asserted (chip selected)
+Time=25915000: WR1 falling edge (write started)
+Time=26915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=27105000: CS deasserted (chip deselected)
+Time=28275000: CS asserted (chip selected)
+Time=28475000: WR1 falling edge (write started)
+Time=29475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=29665000: CS deasserted (chip deselected)
+Time=30835000: CS asserted (chip selected)
+Time=31035000: WR1 falling edge (write started)
+Time=32035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=32225000: CS deasserted (chip deselected)
+Time=33395000: CS asserted (chip selected)
+Time=33595000: WR1 falling edge (write started)
+Time=34595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=34785000: CS deasserted (chip deselected)
+Time=35955000: CS asserted (chip selected)
+Time=36155000: WR1 falling edge (write started)
+Time=37155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=37345000: CS deasserted (chip deselected)
+Time=38515000: CS asserted (chip selected)
+Time=38715000: WR1 falling edge (write started)
+Time=39715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=39905000: CS deasserted (chip deselected)
+Time=41075000: CS asserted (chip selected)
+Time=41275000: WR1 falling edge (write started)
+Time=42275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=42465000: CS deasserted (chip deselected)
+Time=43635000: CS asserted (chip selected)
+Time=43835000: WR1 falling edge (write started)
+Time=44835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=45025000: CS deasserted (chip deselected)
+Time=46195000: CS asserted (chip selected)
+Time=46295000: DAC data changed from 80 to 0b (change #2)
+Time=46395000: WR1 falling edge (write started)
+Time=47395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=47585000: CS deasserted (chip deselected)
+Time=48755000: CS asserted (chip selected)
+Time=48855000: DAC data changed from 0b to af (change #3)
+Time=48955000: WR1 falling edge (write started)
+Time=49955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=50145000: CS deasserted (chip deselected)
+Time=51315000: CS asserted (chip selected)
+Time=51415000: DAC data changed from af to b7 (change #4)
+Time=51515000: WR1 falling edge (write started)
+Time=52515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=52705000: CS deasserted (chip deselected)
+Time=53875000: CS asserted (chip selected)
+Time=53975000: DAC data changed from b7 to 08 (change #5)
+Time=54075000: WR1 falling edge (write started)
+Time=55075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=55265000: CS deasserted (chip deselected)
+Time=56435000: CS asserted (chip selected)
+Time=56535000: DAC data changed from 08 to ee (change #6)
+Time=56635000: WR1 falling edge (write started)
+Time=57635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=57825000: CS deasserted (chip deselected)
+Time=58995000: CS asserted (chip selected)
+Time=59095000: DAC data changed from ee to 63 (change #7)
+Time=59195000: WR1 falling edge (write started)
+Time=60195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=60385000: CS deasserted (chip deselected)
+Time=61555000: CS asserted (chip selected)
+Time=61655000: DAC data changed from 63 to 3b (change #8)
+Time=61755000: WR1 falling edge (write started)
+Time=62755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=62945000: CS deasserted (chip deselected)
+Time=64115000: CS asserted (chip selected)
+Time=64215000: DAC data changed from 3b to 80 (change #9)
+Time=64315000: WR1 falling edge (write started)
+Time=65315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=65505000: CS deasserted (chip deselected)
+Time=66675000: CS asserted (chip selected)
+Time=66875000: WR1 falling edge (write started)
+Time=67875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=68065000: CS deasserted (chip deselected)
+Time=69235000: CS asserted (chip selected)
+Time=69435000: WR1 falling edge (write started)
+Time=70435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=70625000: CS deasserted (chip deselected)
+Time=71795000: CS asserted (chip selected)
+Time=71995000: WR1 falling edge (write started)
+Time=72995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=73185000: CS deasserted (chip deselected)
+Time=74355000: CS asserted (chip selected)
+Time=74555000: WR1 falling edge (write started)
+Time=75555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=75745000: CS deasserted (chip deselected)
+Time=76915000: CS asserted (chip selected)
+Time=77015000: DAC data changed from 80 to da (change #10)
+Time=77115000: WR1 falling edge (write started)
+Time=78115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=78305000: CS deasserted (chip deselected)
+Time=79475000: CS asserted (chip selected)
+Time=79575000: DAC data changed from da to 85 (change #11)
+Time=79675000: WR1 falling edge (write started)
+Time=80675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=80865000: CS deasserted (chip deselected)
+Time=82035000: CS asserted (chip selected)
+Time=82135000: DAC data changed from 85 to 22 (change #12)
+Time=82235000: WR1 falling edge (write started)
+Time=83235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=83425000: CS deasserted (chip deselected)
+Time=84595000: CS asserted (chip selected)
+Time=84695000: DAC data changed from 22 to 80 (change #13)
+Time=84795000: WR1 falling edge (write started)
+Time=85795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=85985000: CS deasserted (chip deselected)
+Time=87155000: CS asserted (chip selected)
+Time=87355000: WR1 falling edge (write started)
+Time=88355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=88545000: CS deasserted (chip deselected)
+Time=89715000: CS asserted (chip selected)
+Time=89915000: WR1 falling edge (write started)
+Time=90915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=91105000: CS deasserted (chip deselected)
+Time=92275000: CS asserted (chip selected)
+Time=92475000: WR1 falling edge (write started)
+Time=93475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=93665000: CS deasserted (chip deselected)
+Time=94835000: CS asserted (chip selected)
+Time=95035000: WR1 falling edge (write started)
+Time=96035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=96225000: CS deasserted (chip deselected)
+Time=97395000: CS asserted (chip selected)
+Time=97495000: DAC data changed from 80 to bf (change #14)
+Time=97595000: WR1 falling edge (write started)
+Time=98595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=98785000: CS deasserted (chip deselected)
+Time=99955000: CS asserted (chip selected)
+Time=100055000: DAC data changed from bf to a6 (change #15)
+Time=100155000: WR1 falling edge (write started)
+Time=101155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=101345000: CS deasserted (chip deselected)
+Time=102515000: CS asserted (chip selected)
+Time=102615000: DAC data changed from a6 to 0f (change #16)
+Time=102715000: WR1 falling edge (write started)
+Time=103715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=103905000: CS deasserted (chip deselected)
+Time=105075000: CS asserted (chip selected)
+Time=105175000: DAC data changed from 0f to 80 (change #17)
+Time=105275000: WR1 falling edge (write started)
+Time=106275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=106465000: CS deasserted (chip deselected)
+Time=107635000: CS asserted (chip selected)
+Time=107835000: WR1 falling edge (write started)
+Time=108835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=109025000: CS deasserted (chip deselected)
+Time=110195000: CS asserted (chip selected)
+Time=110395000: WR1 falling edge (write started)
+Time=111395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=111585000: CS deasserted (chip deselected)
+Time=112755000: CS asserted (chip selected)
+Time=112955000: WR1 falling edge (write started)
+Time=113955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=114145000: CS deasserted (chip deselected)
+Time=115315000: CS asserted (chip selected)
+Time=115515000: WR1 falling edge (write started)
+Time=116515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=116705000: CS deasserted (chip deselected)
+Time=117875000: CS asserted (chip selected)
+Time=118075000: WR1 falling edge (write started)
+Time=119075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=119265000: CS deasserted (chip deselected)
+Time=120435000: CS asserted (chip selected)
+Time=120635000: WR1 falling edge (write started)
+Time=121635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=121825000: CS deasserted (chip deselected)
+Time=122995000: CS asserted (chip selected)
+Time=123195000: WR1 falling edge (write started)
+Time=124195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=124385000: CS deasserted (chip deselected)
+Time=125555000: CS asserted (chip selected)
+Time=125755000: WR1 falling edge (write started)
+Time=126755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=126945000: CS deasserted (chip deselected)
+Time=128115000: CS asserted (chip selected)
+Time=128215000: DAC data changed from 80 to 72 (change #18)
+Time=128315000: WR1 falling edge (write started)
+Time=129315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=129505000: CS deasserted (chip deselected)
+Time=130675000: CS asserted (chip selected)
+Time=130775000: DAC data changed from 72 to 2f (change #19)
+Time=130875000: WR1 falling edge (write started)
+Time=131875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=132065000: CS deasserted (chip deselected)
+Time=133235000: CS asserted (chip selected)
+Time=133335000: DAC data changed from 2f to fe (change #20)
+Time=133435000: WR1 falling edge (write started)
+Time=134435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=134625000: CS deasserted (chip deselected)
+Time=135795000: CS asserted (chip selected)
+Time=135895000: DAC data changed from fe to 80 (change #21)
+Time=135995000: WR1 falling edge (write started)
+Time=136995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=137185000: CS deasserted (chip deselected)
+Time=138355000: CS asserted (chip selected)
+Time=138555000: WR1 falling edge (write started)
+Time=139555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=139745000: CS deasserted (chip deselected)
+Time=140915000: CS asserted (chip selected)
+Time=141115000: WR1 falling edge (write started)
+Time=142115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=142305000: CS deasserted (chip deselected)
+Time=143475000: CS asserted (chip selected)
+Time=143675000: WR1 falling edge (write started)
+Time=144675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=144865000: CS deasserted (chip deselected)
+Time=146035000: CS asserted (chip selected)
+Time=146235000: WR1 falling edge (write started)
+Time=147235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=147425000: CS deasserted (chip deselected)
+Time=148595000: CS asserted (chip selected)
+Time=148695000: DAC data changed from 80 to 94 (change #22)
+Time=148795000: WR1 falling edge (write started)
+Time=149795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=149985000: CS deasserted (chip deselected)
+Time=151155000: CS asserted (chip selected)
+Time=151255000: DAC data changed from 94 to 18 (change #23)
+Time=151355000: WR1 falling edge (write started)
+Time=152355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=152545000: CS deasserted (chip deselected)
+Time=153715000: CS asserted (chip selected)
+Time=153815000: DAC data changed from 18 to fb (change #24)
+Time=153915000: WR1 falling edge (write started)
+Time=154915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=155105000: CS deasserted (chip deselected)
+Time=156275000: CS asserted (chip selected)
+Time=156375000: DAC data changed from fb to 41 (change #25)
+Time=156475000: WR1 falling edge (write started)
+Time=157475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=157665000: CS deasserted (chip deselected)
+Time=158835000: CS asserted (chip selected)
+Time=158935000: DAC data changed from 41 to 5a (change #26)
+Time=159035000: WR1 falling edge (write started)
+Time=160035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=160225000: CS deasserted (chip deselected)
+Time=161395000: CS asserted (chip selected)
+Time=161495000: DAC data changed from 5a to f1 (change #27)
+Time=161595000: WR1 falling edge (write started)
+Time=162595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=162785000: CS deasserted (chip deselected)
+Time=163955000: CS asserted (chip selected)
+Time=164055000: DAC data changed from f1 to 0a (change #28)
+Time=164155000: WR1 falling edge (write started)
+Time=165155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=165345000: CS deasserted (chip deselected)
+Time=166515000: CS asserted (chip selected)
+Time=166615000: DAC data changed from 0a to af (change #29)
+Time=166715000: WR1 falling edge (write started)
+Time=167715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=167905000: CS deasserted (chip deselected)
+Time=169075000: CS asserted (chip selected)
+Time=169175000: DAC data changed from af to b4 (change #30)
+Time=169275000: WR1 falling edge (write started)
+Time=170275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=170465000: CS deasserted (chip deselected)
+Time=171635000: CS asserted (chip selected)
+Time=171735000: DAC data changed from b4 to 08 (change #31)
+Time=171835000: WR1 falling edge (write started)
+Time=172835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=173025000: CS deasserted (chip deselected)
+Time=174195000: CS asserted (chip selected)
+Time=174295000: DAC data changed from 08 to 80 (change #32)
+Time=174395000: WR1 falling edge (write started)
+Time=175395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=175585000: CS deasserted (chip deselected)
+Time=176755000: CS asserted (chip selected)
+Time=176955000: WR1 falling edge (write started)
+Time=177955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=178145000: CS deasserted (chip deselected)
+Time=179315000: CS asserted (chip selected)
+Time=179515000: WR1 falling edge (write started)
+Time=180515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=180705000: CS deasserted (chip deselected)
+Time=181875000: CS asserted (chip selected)
+Time=182075000: WR1 falling edge (write started)
+Time=183075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=183265000: CS deasserted (chip deselected)
+Time=184435000: CS asserted (chip selected)
+Time=184635000: WR1 falling edge (write started)
+Time=185635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=185825000: CS deasserted (chip deselected)
+Time=186995000: CS asserted (chip selected)
+Time=187095000: DAC data changed from 80 to 8e (change #33)
+Time=187195000: WR1 falling edge (write started)
+Time=188195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=188385000: CS deasserted (chip deselected)
+Time=189555000: CS asserted (chip selected)
+Time=189655000: DAC data changed from 8e to d1 (change #34)
+Time=189755000: WR1 falling edge (write started)
+Time=190755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=190945000: CS deasserted (chip deselected)
+Time=192115000: CS asserted (chip selected)
+Time=192215000: DAC data changed from d1 to 02 (change #35)
+Time=192315000: WR1 falling edge (write started)
+Time=193315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=193505000: CS deasserted (chip deselected)
+Time=194675000: CS asserted (chip selected)
+Time=194775000: DAC data changed from 02 to da (change #36)
+Time=194875000: WR1 falling edge (write started)
+Time=195875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=196065000: CS deasserted (chip deselected)

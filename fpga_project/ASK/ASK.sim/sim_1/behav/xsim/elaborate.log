@@ -61,6 +61,7 @@ Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
 Compiling package ieee.std_logic_unsigned
 Compiling package dds_compiler_v6_0_17.pkg_betas
 Compiling package dds_compiler_v6_0_17.pkg_alphas
+Compiling module xil_defaultlib.dac_controller
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
@@ -161,7 +162,6 @@ Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17
 Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv [\dds_compiler_v6_0_17_viv(c_xdev...]
 Compiling architecture xilinx of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17 [\dds_compiler_v6_0_17(c_xdevicef...]
 Compiling architecture dds_arch of entity xil_defaultlib.dds [dds_default]
-Compiling module xil_defaultlib.dac_controller
 Compiling module xil_defaultlib.top_2ask_transmitter_default
 Compiling module xil_defaultlib.tb_2ask_transmitter
 Compiling module xil_defaultlib.glbl

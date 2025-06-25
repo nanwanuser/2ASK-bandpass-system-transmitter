@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Jun 25 22:23:59 2025
+| Date         : Thu Jun 26 01:09:45 2025
 | Host         : NanwanPC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_2ask_transmitter_methodology_drc_routed.rpt -pb top_2ask_transmitter_methodology_drc_routed.pb -rpx top_2ask_transmitter_methodology_drc_routed.rpx
 | Design       : top_2ask_transmitter
@@ -23,58 +23,63 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 9
+             Violations found: 10
 +-----------+----------+-----------------------+------------+
 | Rule      | Severity | Description           | Violations |
 +-----------+----------+-----------------------+------------+
-| TIMING-16 | Warning  | Large setup violation | 9          |
+| TIMING-16 | Warning  | Large setup violation | 10         |
 +-----------+----------+-----------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -4.724 ns between u_dac_controller/dac_data_reg[0]/C (clocked by sys_clk) and dac_data[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.146 ns between u_dac_controller/dac_cs_n_reg/C (clocked by sys_clk) and dac_cs_n (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -4.728 ns between u_dac_controller/dac_data_reg[1]/C (clocked by sys_clk) and dac_data[1] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -4.306 ns between u_dac_controller/dac_wr1_n_reg/C (clocked by sys_clk) and dac_wr1_n (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -4.734 ns between u_dac_controller/dac_data_reg[2]/C (clocked by sys_clk) and dac_data[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.161 ns between u_dac_controller/dac_data_reg[0]/C (clocked by sys_clk) and dac_data[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -4.735 ns between u_dac_controller/dac_data_reg[3]/C (clocked by sys_clk) and dac_data[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.165 ns between u_dac_controller/dac_data_reg[1]/C (clocked by sys_clk) and dac_data[1] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -4.735 ns between u_dac_controller/dac_data_reg[6]/C (clocked by sys_clk) and dac_data[6] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.171 ns between u_dac_controller/dac_data_reg[2]/C (clocked by sys_clk) and dac_data[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -4.737 ns between u_dac_controller/dac_data_reg[4]/C (clocked by sys_clk) and dac_data[4] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.172 ns between u_dac_controller/dac_data_reg[3]/C (clocked by sys_clk) and dac_data[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -4.740 ns between u_dac_controller/dac_wr1_n_reg/C (clocked by sys_clk) and dac_wr1_n (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.172 ns between u_dac_controller/dac_data_reg[6]/C (clocked by sys_clk) and dac_data[6] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -4.742 ns between u_dac_controller/dac_data_reg[7]/C (clocked by sys_clk) and dac_data[7] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.174 ns between u_dac_controller/dac_data_reg[4]/C (clocked by sys_clk) and dac_data[4] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -4.876 ns between u_dac_controller/dac_data_reg[5]/C (clocked by sys_clk) and dac_data[5] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -9.175 ns between u_dac_controller/dac_data_reg[5]/C (clocked by sys_clk) and dac_data[5] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -9.179 ns between u_dac_controller/dac_data_reg[7]/C (clocked by sys_clk) and dac_data[7] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

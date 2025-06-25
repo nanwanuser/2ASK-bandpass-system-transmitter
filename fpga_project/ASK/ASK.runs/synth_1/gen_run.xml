@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1750861367">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1750871292">
   <File Type="PA-TCL" Name="top_2ask_transmitter.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_2ask_transmitter_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_2ask_transmitter_reports.tcl"/>
@@ -52,6 +52,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ask_transmitter.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -62,9 +63,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="dds"/>

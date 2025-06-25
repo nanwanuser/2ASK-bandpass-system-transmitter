@@ -2,10 +2,10 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Jun 25 22:08:29 2025
-# Process ID: 52260
+# Start of session at: Thu Jun 26 00:48:48 2025
+# Process ID: 19368
 # Current directory: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43380 D:\Desktop\2ASK_FPGA\2ASK-bandpass-system-transmitter\fpga_project\ASK\ASK.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3376 D:\Desktop\2ASK_FPGA\2ASK-bandpass-system-transmitter\fpga_project\ASK\ASK.xpr
 # Log file: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/vivado.log
 # Journal file: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK\vivado.jou
 #-----------------------------------------------------------
@@ -16,33 +16,9 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 776.246 ; gain = 173.176
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 747.574 ; gain = 140.754
 update_compile_order -fileset sources_1
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:]
-ERROR: [Common 17-180] Spawn failed: No error
-reset_run ROM_synth_1
-reset_run fir_synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 16
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ROM'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir'...
-[Wed Jun 25 22:14:39 2025] Launched ROM_synth_1, fir_synth_1...
-Run output will be captured here:
-ROM_synth_1: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/ROM_synth_1/runme.log
-fir_synth_1: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/fir_synth_1/runme.log
-[Wed Jun 25 22:14:39 2025] Launched synth_1...
-Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 945.633 ; gain = 54.359
-generate_target Simulation [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci]
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir'...
-export_ip_user_files -of_objects [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/fir.xci] -directory D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files -ipstatic_source_dir D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/modelsim} {questa=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/questa} {riviera=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/riviera} {activehdl=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-generate_target Simulation [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/ROM.xci]
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ROM'...
-generate_target: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 982.961 ; gain = 14.504
-export_ip_user_files -of_objects [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/ROM.xci] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/ROM.xci] -directory D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files/sim_scripts -ip_user_files_dir D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files -ipstatic_source_dir D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/modelsim} {questa=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/questa} {riviera=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/riviera} {activehdl=D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
 launch_simulation
 INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
@@ -68,13 +44,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-
 INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
 "xvhdl --incr --relax -prj tb_2ask_transmitter_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/sim/dds.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'dds'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/sim/fir.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'fir'
 INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
@@ -141,6 +111,7 @@ Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
 Compiling package ieee.std_logic_unsigned
 Compiling package dds_compiler_v6_0_17.pkg_betas
 Compiling package dds_compiler_v6_0_17.pkg_alphas
+Compiling module xil_defaultlib.dac_controller
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
 Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
@@ -241,290 +212,11 @@ Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17
 Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv [\dds_compiler_v6_0_17_viv(c_xdev...]
 Compiling architecture xilinx of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17 [\dds_compiler_v6_0_17(c_xdevicef...]
 Compiling architecture dds_arch of entity xil_defaultlib.dds [dds_default]
-Compiling module xil_defaultlib.dac_controller
 Compiling module xil_defaultlib.top_2ask_transmitter_default
 Compiling module xil_defaultlib.tb_2ask_transmitter
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_2ask_transmitter_behav
-run_program: Time (s): cpu = 00:00:12 ; elapsed = 00:01:54 . Memory (MB): peak = 1004.578 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '113' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_2ask_transmitter_behav -key {Behavioral:sim_1:Functional:tb_2ask_transmitter} -tclbatch {tb_2ask_transmitter.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-source tb_2ask_transmitter.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Time=0: DAC transaction started
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_2ask_transmitter_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:20 ; elapsed = 00:02:04 . Memory (MB): peak = 1125.598 ; gain = 121.020
-save_wave_config {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg}
-add_files -fileset sim_1 -norecurse D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg
-set_property xsim.view D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg [get_filesets sim_1]
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 10 us
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Time=0: DAC transaction started
-WARNING: [Simulator 45-29] Cannot open source file /wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v: file does not exist.
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 10 us
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Time=0: DAC transaction started
-run 100 us
-run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 1125.598 ; gain = 0.000
-save_wave_config {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg}
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-[Wed Jun 25 22:22:48 2025] Launched synth_1...
-Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/runme.log
-[Wed Jun 25 22:22:48 2025] Launched impl_1...
-Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  7 2018-00:40:27
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
-set_property PROGRAM.FILE {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/impl_1/top_2ask_transmitter.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/impl_1/top_2ask_transmitter.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw
-launch_simulation
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_2ask_transmitter' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/ROM.mif'
-INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/scrambled_data_1bit.coe'
-INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/fir.mif'
-INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/FIR.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_2ask_transmitter_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dac_controller
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
-"xvhdl --incr --relax -prj tb_2ask_transmitter_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
-Vivado Simulator 2018.3
-Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1845c764a1847ad96e089803310f14b --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L dds_compiler_v6_0_17 -L xil_defaultlib -L fir_compiler_v7_2_11 -L blk_mem_gen_v8_4_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_2ask_transmitter_behav xil_defaultlib.tb_2ask_transmitter xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
-Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
-Compiling package ieee.std_logic_textio
-Compiling package fir_compiler_v7_2_11.globals_pkg
-Compiling package fir_compiler_v7_2_11.components
-Compiling package ieee.math_real
-Compiling package axi_utils_v2_0_5.global_util_pkg
-Compiling package axi_utils_v2_0_5.axi_utils_comps
-Compiling package unisim.vcomponents
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling package xbip_utils_v3_0_9.xcc_utils_v3_0
-Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv_comp
-Compiling package dds_compiler_v6_0_17.pkg_dds_compiler_v6_0_17
-Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_hdl_comps
-Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
-Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
-Compiling package ieee.std_logic_unsigned
-Compiling package dds_compiler_v6_0_17.pkg_betas
-Compiling package dds_compiler_v6_0_17.pkg_alphas
-Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
-Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
-Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
-Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
-Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
-Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
-Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
-Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
-WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.add_accum [\add_accum(c_xdevicefamily="arti...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=10,c_xdevicef...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate [\single_rate(c_xdevicefamily="ar...]
-Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
-Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
-Compiling architecture fir_arch of entity xil_defaultlib.fir [fir_default]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
-Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_rdy [\dds_compiler_v6_0_17_rdy(c_has_...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
-Compiling architecture synth of entity dds_compiler_v6_0_17.pipe_add [\pipe_add(c_width=27,c_seg_width...]
-Compiling architecture synth of entity dds_compiler_v6_0_17.accum [\accum(c_xdevicefamily="artix7",...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
-Compiling architecture synth of entity dds_compiler_v6_0_17.sin_cos [\sin_cos(c_xdevicefamily="artix7...]
-Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
-Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_core [\dds_compiler_v6_0_17_core(c_xde...]
-Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv [\dds_compiler_v6_0_17_viv(c_xdev...]
-Compiling architecture xilinx of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17 [\dds_compiler_v6_0_17(c_xdevicef...]
-Compiling architecture dds_arch of entity xil_defaultlib.dds [dds_default]
-Compiling module xil_defaultlib.dac_controller
-Compiling module xil_defaultlib.top_2ask_transmitter_default
-Compiling module xil_defaultlib.tb_2ask_transmitter
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_2ask_transmitter_behav
-run_program: Time (s): cpu = 00:00:08 ; elapsed = 00:01:46 . Memory (MB): peak = 2085.805 ; gain = 9.625
+run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:01:46 . Memory (MB): peak = 892.582 ; gain = 0.000
 INFO: [USF-XSim-69] 'elaborate' step finished in '106' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
@@ -548,14 +240,904 @@ source tb_2ask_transmitter.tcl
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
 Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Time=0: DAC transaction started
+Time=0: DAC data changed from 00 to 80 (change #1)
+Time=0: CS deasserted (chip deselected)
+Time=0: WR1 rising edge (write completed), pulse width=xns
+DAC configured in Control Signal Timing mode
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1009.871 ; gain = 117.289
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_2ask_transmitter_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:01:54 . Memory (MB): peak = 2092.359 ; gain = 16.457
-run 100 us
-run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 2175.309 ; gain = 3.066
-run 100 us
-run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 2176.980 ; gain = 1.672
-save_wave_config {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg}
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:01:58 . Memory (MB): peak = 1009.871 ; gain = 117.289
+run 10 us
+Time=2675000: CS asserted (chip selected)
+Time=2875000: WR1 falling edge (write started)
+Time=3875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=4065000: CS deasserted (chip deselected)
+Time=5235000: CS asserted (chip selected)
+Time=5435000: WR1 falling edge (write started)
+Time=6435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=6625000: CS deasserted (chip deselected)
+Time=7795000: CS asserted (chip selected)
+Time=7995000: WR1 falling edge (write started)
+Time=8995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=9185000: CS deasserted (chip deselected)
+Time=10355000: CS asserted (chip selected)
+Time=10555000: WR1 falling edge (write started)
+run 200 us
+Time=11555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=11745000: CS deasserted (chip deselected)
+Time=12915000: CS asserted (chip selected)
+Time=13115000: WR1 falling edge (write started)
+Time=14115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=14305000: CS deasserted (chip deselected)
+Time=15475000: CS asserted (chip selected)
+Time=15675000: WR1 falling edge (write started)
+Time=16675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=16865000: CS deasserted (chip deselected)
+Time=18035000: CS asserted (chip selected)
+Time=18235000: WR1 falling edge (write started)
+Time=19235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=19425000: CS deasserted (chip deselected)
+Time=20595000: CS asserted (chip selected)
+Time=20795000: WR1 falling edge (write started)
+Time=21795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=21985000: CS deasserted (chip deselected)
+Time=23155000: CS asserted (chip selected)
+Time=23355000: WR1 falling edge (write started)
+Time=24355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=24545000: CS deasserted (chip deselected)
+Time=25715000: CS asserted (chip selected)
+Time=25915000: WR1 falling edge (write started)
+Time=26915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=27105000: CS deasserted (chip deselected)
+Time=28275000: CS asserted (chip selected)
+Time=28475000: WR1 falling edge (write started)
+Time=29475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=29665000: CS deasserted (chip deselected)
+Time=30835000: CS asserted (chip selected)
+Time=31035000: WR1 falling edge (write started)
+Time=32035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=32225000: CS deasserted (chip deselected)
+Time=33395000: CS asserted (chip selected)
+Time=33595000: WR1 falling edge (write started)
+Time=34595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=34785000: CS deasserted (chip deselected)
+Time=35955000: CS asserted (chip selected)
+Time=36155000: WR1 falling edge (write started)
+Time=37155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=37345000: CS deasserted (chip deselected)
+Time=38515000: CS asserted (chip selected)
+Time=38715000: WR1 falling edge (write started)
+Time=39715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=39905000: CS deasserted (chip deselected)
+Time=41075000: CS asserted (chip selected)
+Time=41275000: WR1 falling edge (write started)
+Time=42275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=42465000: CS deasserted (chip deselected)
+Time=43635000: CS asserted (chip selected)
+Time=43835000: WR1 falling edge (write started)
+Time=44835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=45025000: CS deasserted (chip deselected)
+Time=46195000: CS asserted (chip selected)
+Time=46395000: WR1 falling edge (write started)
+Time=47395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=47585000: CS deasserted (chip deselected)
+Time=48755000: CS asserted (chip selected)
+Time=48955000: WR1 falling edge (write started)
+Time=49955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=50145000: CS deasserted (chip deselected)
+Time=51315000: CS asserted (chip selected)
+Time=51515000: WR1 falling edge (write started)
+Time=52515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=52705000: CS deasserted (chip deselected)
+Time=53875000: CS asserted (chip selected)
+Time=54075000: WR1 falling edge (write started)
+Time=55075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=55265000: CS deasserted (chip deselected)
+Time=56435000: CS asserted (chip selected)
+Time=56635000: WR1 falling edge (write started)
+Time=57635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=57825000: CS deasserted (chip deselected)
+Time=58995000: CS asserted (chip selected)
+Time=59195000: WR1 falling edge (write started)
+Time=60195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=60385000: CS deasserted (chip deselected)
+Time=61555000: CS asserted (chip selected)
+Time=61755000: WR1 falling edge (write started)
+Time=62755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=62945000: CS deasserted (chip deselected)
+Time=64115000: CS asserted (chip selected)
+Time=64315000: WR1 falling edge (write started)
+Time=65315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=65505000: CS deasserted (chip deselected)
+Time=66675000: CS asserted (chip selected)
+Time=66875000: WR1 falling edge (write started)
+Time=67875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=68065000: CS deasserted (chip deselected)
+Time=69235000: CS asserted (chip selected)
+Time=69435000: WR1 falling edge (write started)
+Time=70435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=70625000: CS deasserted (chip deselected)
+Time=71795000: CS asserted (chip selected)
+Time=71995000: WR1 falling edge (write started)
+Time=72995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=73185000: CS deasserted (chip deselected)
+Time=74355000: CS asserted (chip selected)
+Time=74555000: WR1 falling edge (write started)
+Time=75555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=75745000: CS deasserted (chip deselected)
+Time=76915000: CS asserted (chip selected)
+Time=77115000: WR1 falling edge (write started)
+Time=78115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=78305000: CS deasserted (chip deselected)
+Time=79475000: CS asserted (chip selected)
+Time=79675000: WR1 falling edge (write started)
+Time=80675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=80865000: CS deasserted (chip deselected)
+Time=82035000: CS asserted (chip selected)
+Time=82235000: WR1 falling edge (write started)
+Time=83235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=83425000: CS deasserted (chip deselected)
+Time=84595000: CS asserted (chip selected)
+Time=84795000: WR1 falling edge (write started)
+Time=85795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=85985000: CS deasserted (chip deselected)
+Time=87155000: CS asserted (chip selected)
+Time=87355000: WR1 falling edge (write started)
+Time=88355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=88545000: CS deasserted (chip deselected)
+Time=89715000: CS asserted (chip selected)
+Time=89915000: WR1 falling edge (write started)
+Time=90915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=91105000: CS deasserted (chip deselected)
+Time=92275000: CS asserted (chip selected)
+Time=92475000: WR1 falling edge (write started)
+Time=93475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=93665000: CS deasserted (chip deselected)
+Time=94835000: CS asserted (chip selected)
+Time=95035000: WR1 falling edge (write started)
+Time=96035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=96225000: CS deasserted (chip deselected)
+Time=97395000: CS asserted (chip selected)
+Time=97595000: WR1 falling edge (write started)
+Time=98595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=98785000: CS deasserted (chip deselected)
+Time=99955000: CS asserted (chip selected)
+Time=100155000: WR1 falling edge (write started)
+Time=101155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=101345000: CS deasserted (chip deselected)
+Time=102515000: CS asserted (chip selected)
+Time=102715000: WR1 falling edge (write started)
+Time=103715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=103905000: CS deasserted (chip deselected)
+Time=105075000: CS asserted (chip selected)
+Time=105275000: WR1 falling edge (write started)
+Time=106275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=106465000: CS deasserted (chip deselected)
+Time=107635000: CS asserted (chip selected)
+Time=107835000: WR1 falling edge (write started)
+Time=108835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=109025000: CS deasserted (chip deselected)
+Time=110195000: CS asserted (chip selected)
+Time=110395000: WR1 falling edge (write started)
+Time=111395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=111585000: CS deasserted (chip deselected)
+Time=112755000: CS asserted (chip selected)
+Time=112955000: WR1 falling edge (write started)
+Time=113955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=114145000: CS deasserted (chip deselected)
+Time=115315000: CS asserted (chip selected)
+Time=115515000: WR1 falling edge (write started)
+Time=116515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=116705000: CS deasserted (chip deselected)
+Time=117875000: CS asserted (chip selected)
+Time=118075000: WR1 falling edge (write started)
+Time=119075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=119265000: CS deasserted (chip deselected)
+Time=120435000: CS asserted (chip selected)
+Time=120635000: WR1 falling edge (write started)
+Time=121635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=121825000: CS deasserted (chip deselected)
+Time=122995000: CS asserted (chip selected)
+Time=123195000: WR1 falling edge (write started)
+Time=124195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=124385000: CS deasserted (chip deselected)
+Time=125555000: CS asserted (chip selected)
+Time=125755000: WR1 falling edge (write started)
+Time=126755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=126945000: CS deasserted (chip deselected)
+Time=128115000: CS asserted (chip selected)
+Time=128315000: WR1 falling edge (write started)
+Time=129315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=129505000: CS deasserted (chip deselected)
+Time=130675000: CS asserted (chip selected)
+Time=130875000: WR1 falling edge (write started)
+Time=131875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=132065000: CS deasserted (chip deselected)
+Time=133235000: CS asserted (chip selected)
+Time=133435000: WR1 falling edge (write started)
+Time=134435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=134625000: CS deasserted (chip deselected)
+Time=135795000: CS asserted (chip selected)
+Time=135995000: WR1 falling edge (write started)
+Time=136995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=137185000: CS deasserted (chip deselected)
+Time=138355000: CS asserted (chip selected)
+Time=138555000: WR1 falling edge (write started)
+Time=139555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=139745000: CS deasserted (chip deselected)
+Time=140915000: CS asserted (chip selected)
+Time=141115000: WR1 falling edge (write started)
+Time=142115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=142305000: CS deasserted (chip deselected)
+Time=143475000: CS asserted (chip selected)
+Time=143675000: WR1 falling edge (write started)
+Time=144675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=144865000: CS deasserted (chip deselected)
+Time=146035000: CS asserted (chip selected)
+Time=146235000: WR1 falling edge (write started)
+Time=147235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=147425000: CS deasserted (chip deselected)
+Time=148595000: CS asserted (chip selected)
+Time=148795000: WR1 falling edge (write started)
+Time=149795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=149985000: CS deasserted (chip deselected)
+Time=151155000: CS asserted (chip selected)
+Time=151355000: WR1 falling edge (write started)
+Time=152355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=152545000: CS deasserted (chip deselected)
+Time=153715000: CS asserted (chip selected)
+Time=153915000: WR1 falling edge (write started)
+Time=154915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=155105000: CS deasserted (chip deselected)
+Time=156275000: CS asserted (chip selected)
+Time=156475000: WR1 falling edge (write started)
+Time=157475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=157665000: CS deasserted (chip deselected)
+Time=158835000: CS asserted (chip selected)
+Time=159035000: WR1 falling edge (write started)
+Time=160035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=160225000: CS deasserted (chip deselected)
+Time=161395000: CS asserted (chip selected)
+Time=161595000: WR1 falling edge (write started)
+Time=162595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=162785000: CS deasserted (chip deselected)
+Time=163955000: CS asserted (chip selected)
+Time=164155000: WR1 falling edge (write started)
+Time=165155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=165345000: CS deasserted (chip deselected)
+Time=166515000: CS asserted (chip selected)
+Time=166715000: WR1 falling edge (write started)
+Time=167715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=167905000: CS deasserted (chip deselected)
+Time=169075000: CS asserted (chip selected)
+Time=169275000: WR1 falling edge (write started)
+Time=170275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=170465000: CS deasserted (chip deselected)
+Time=171635000: CS asserted (chip selected)
+Time=171835000: WR1 falling edge (write started)
+Time=172835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=173025000: CS deasserted (chip deselected)
+Time=174195000: CS asserted (chip selected)
+Time=174395000: WR1 falling edge (write started)
+Time=175395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=175585000: CS deasserted (chip deselected)
+Time=176755000: CS asserted (chip selected)
+Time=176955000: WR1 falling edge (write started)
+Time=177955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=178145000: CS deasserted (chip deselected)
+Time=179315000: CS asserted (chip selected)
+Time=179515000: WR1 falling edge (write started)
+Time=180515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=180705000: CS deasserted (chip deselected)
+Time=181875000: CS asserted (chip selected)
+Time=182075000: WR1 falling edge (write started)
+Time=183075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=183265000: CS deasserted (chip deselected)
+Time=184435000: CS asserted (chip selected)
+Time=184635000: WR1 falling edge (write started)
+Time=185635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=185825000: CS deasserted (chip deselected)
+Time=186995000: CS asserted (chip selected)
+Time=187195000: WR1 falling edge (write started)
+Time=188195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=188385000: CS deasserted (chip deselected)
+Time=189555000: CS asserted (chip selected)
+Time=189755000: WR1 falling edge (write started)
+Time=190755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=190945000: CS deasserted (chip deselected)
+Time=192115000: CS asserted (chip selected)
+Time=192315000: WR1 falling edge (write started)
+Time=193315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=193505000: CS deasserted (chip deselected)
+Time=194675000: CS asserted (chip selected)
+Time=194875000: WR1 falling edge (write started)
+Time=195875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=196065000: CS deasserted (chip deselected)
+Time=197235000: CS asserted (chip selected)
+Time=197435000: WR1 falling edge (write started)
+Time=198435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=198625000: CS deasserted (chip deselected)
+Time=199795000: CS asserted (chip selected)
+Time=199995000: WR1 falling edge (write started)
+Time=200995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=201185000: CS deasserted (chip deselected)
+Time=202355000: CS asserted (chip selected)
+Time=202555000: WR1 falling edge (write started)
+Time=203555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=203745000: CS deasserted (chip deselected)
+Time=204915000: CS asserted (chip selected)
+Time=205115000: WR1 falling edge (write started)
+Time=206115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=206305000: CS deasserted (chip deselected)
+Time=207475000: CS asserted (chip selected)
+Time=207675000: WR1 falling edge (write started)
+Time=208675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=208865000: CS deasserted (chip deselected)
+Time=210035000: CS asserted (chip selected)
+Time=210235000: WR1 falling edge (write started)
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:39 . Memory (MB): peak = 1009.871 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_2ask_transmitter' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/ROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/scrambled_data_1bit.coe'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/fir.mif'
+INFO: [SIM-utils-43] Exported 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/FIR.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_2ask_transmitter_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/sim/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dac_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
+"xvhdl --incr --relax -prj tb_2ask_transmitter_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto a1845c764a1847ad96e089803310f14b --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L dds_compiler_v6_0_17 -L xil_defaultlib -L fir_compiler_v7_2_11 -L blk_mem_gen_v8_4_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_2ask_transmitter_behav xil_defaultlib.tb_2ask_transmitter xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xbip_utils_v3_0_9.xcc_utils_v3_0
+Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv_comp
+Compiling package dds_compiler_v6_0_17.pkg_dds_compiler_v6_0_17
+Compiling package dds_compiler_v6_0_17.dds_compiler_v6_0_17_hdl_comps
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.std_logic_unsigned
+Compiling package dds_compiler_v6_0_17.pkg_betas
+Compiling package dds_compiler_v6_0_17.pkg_alphas
+Compiling module xil_defaultlib.dac_controller
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.ROM
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=8,has_ifx=tr...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(has_ifx=true)\]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(inmodereg=0,mask="11111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.add_accum [\add_accum(c_xdevicefamily="arti...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate [\single_rate(c_xdevicefamily="ar...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_arch of entity xil_defaultlib.fir [fir_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_rdy [\dds_compiler_v6_0_17_rdy(c_has_...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.pipe_add [\pipe_add(c_width=27,c_seg_width...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.accum [\accum(c_xdevicefamily="artix7",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.sin_cos [\sin_cos(c_xdevicefamily="artix7...]
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_has_ce=1...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_core [\dds_compiler_v6_0_17_core(c_xde...]
+Compiling architecture synth of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17_viv [\dds_compiler_v6_0_17_viv(c_xdev...]
+Compiling architecture xilinx of entity dds_compiler_v6_0_17.dds_compiler_v6_0_17 [\dds_compiler_v6_0_17(c_xdevicef...]
+Compiling architecture dds_arch of entity xil_defaultlib.dds [dds_default]
+Compiling module xil_defaultlib.top_2ask_transmitter_default
+Compiling module xil_defaultlib.tb_2ask_transmitter
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_2ask_transmitter_behav
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:01:47 . Memory (MB): peak = 1012.164 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '107' seconds
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:01:47 . Memory (MB): peak = 1012.164 ; gain = 0.000
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_2ask_transmitter.uut.u_rom.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Time=0: DAC data changed from 00 to 80 (change #1)
+Time=0: CS deasserted (chip deselected)
+Time=0: WR1 rising edge (write completed), pulse width=xns
+DAC configured in Control Signal Timing mode
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:01:55 . Memory (MB): peak = 1012.164 ; gain = 0.000
+run 200 us
+Time=2675000: CS asserted (chip selected)
+Time=2875000: WR1 falling edge (write started)
+Time=3875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=4065000: CS deasserted (chip deselected)
+Time=5235000: CS asserted (chip selected)
+Time=5435000: WR1 falling edge (write started)
+Time=6435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=6625000: CS deasserted (chip deselected)
+Time=7795000: CS asserted (chip selected)
+Time=7995000: WR1 falling edge (write started)
+Time=8995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=9185000: CS deasserted (chip deselected)
+Time=10355000: CS asserted (chip selected)
+Time=10555000: WR1 falling edge (write started)
+Time=11555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=11745000: CS deasserted (chip deselected)
+Time=12915000: CS asserted (chip selected)
+Time=13115000: WR1 falling edge (write started)
+Time=14115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=14305000: CS deasserted (chip deselected)
+Time=15475000: CS asserted (chip selected)
+Time=15675000: WR1 falling edge (write started)
+Time=16675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=16865000: CS deasserted (chip deselected)
+Time=18035000: CS asserted (chip selected)
+Time=18235000: WR1 falling edge (write started)
+Time=19235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=19425000: CS deasserted (chip deselected)
+Time=20595000: CS asserted (chip selected)
+Time=20795000: WR1 falling edge (write started)
+Time=21795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=21985000: CS deasserted (chip deselected)
+Time=23155000: CS asserted (chip selected)
+Time=23355000: WR1 falling edge (write started)
+Time=24355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=24545000: CS deasserted (chip deselected)
+Time=25715000: CS asserted (chip selected)
+Time=25915000: WR1 falling edge (write started)
+Time=26915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=27105000: CS deasserted (chip deselected)
+Time=28275000: CS asserted (chip selected)
+Time=28475000: WR1 falling edge (write started)
+Time=29475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=29665000: CS deasserted (chip deselected)
+Time=30835000: CS asserted (chip selected)
+Time=31035000: WR1 falling edge (write started)
+Time=32035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=32225000: CS deasserted (chip deselected)
+Time=33395000: CS asserted (chip selected)
+Time=33595000: WR1 falling edge (write started)
+Time=34595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=34785000: CS deasserted (chip deselected)
+Time=35955000: CS asserted (chip selected)
+Time=36155000: WR1 falling edge (write started)
+Time=37155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=37345000: CS deasserted (chip deselected)
+Time=38515000: CS asserted (chip selected)
+Time=38715000: WR1 falling edge (write started)
+Time=39715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=39905000: CS deasserted (chip deselected)
+Time=41075000: CS asserted (chip selected)
+Time=41275000: WR1 falling edge (write started)
+Time=42275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=42465000: CS deasserted (chip deselected)
+Time=43635000: CS asserted (chip selected)
+Time=43835000: WR1 falling edge (write started)
+Time=44835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=45025000: CS deasserted (chip deselected)
+Time=46195000: CS asserted (chip selected)
+Time=46295000: DAC data changed from 80 to 0b (change #2)
+Time=46395000: WR1 falling edge (write started)
+Time=47395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=47585000: CS deasserted (chip deselected)
+Time=48755000: CS asserted (chip selected)
+Time=48855000: DAC data changed from 0b to af (change #3)
+Time=48955000: WR1 falling edge (write started)
+Time=49955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=50145000: CS deasserted (chip deselected)
+Time=51315000: CS asserted (chip selected)
+Time=51415000: DAC data changed from af to b7 (change #4)
+Time=51515000: WR1 falling edge (write started)
+Time=52515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=52705000: CS deasserted (chip deselected)
+Time=53875000: CS asserted (chip selected)
+Time=53975000: DAC data changed from b7 to 08 (change #5)
+Time=54075000: WR1 falling edge (write started)
+Time=55075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=55265000: CS deasserted (chip deselected)
+Time=56435000: CS asserted (chip selected)
+Time=56535000: DAC data changed from 08 to ee (change #6)
+Time=56635000: WR1 falling edge (write started)
+Time=57635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=57825000: CS deasserted (chip deselected)
+Time=58995000: CS asserted (chip selected)
+Time=59095000: DAC data changed from ee to 63 (change #7)
+Time=59195000: WR1 falling edge (write started)
+Time=60195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=60385000: CS deasserted (chip deselected)
+Time=61555000: CS asserted (chip selected)
+Time=61655000: DAC data changed from 63 to 3b (change #8)
+Time=61755000: WR1 falling edge (write started)
+Time=62755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=62945000: CS deasserted (chip deselected)
+Time=64115000: CS asserted (chip selected)
+Time=64215000: DAC data changed from 3b to 80 (change #9)
+Time=64315000: WR1 falling edge (write started)
+Time=65315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=65505000: CS deasserted (chip deselected)
+Time=66675000: CS asserted (chip selected)
+Time=66875000: WR1 falling edge (write started)
+Time=67875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=68065000: CS deasserted (chip deselected)
+Time=69235000: CS asserted (chip selected)
+Time=69435000: WR1 falling edge (write started)
+Time=70435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=70625000: CS deasserted (chip deselected)
+Time=71795000: CS asserted (chip selected)
+Time=71995000: WR1 falling edge (write started)
+Time=72995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=73185000: CS deasserted (chip deselected)
+Time=74355000: CS asserted (chip selected)
+Time=74555000: WR1 falling edge (write started)
+Time=75555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=75745000: CS deasserted (chip deselected)
+Time=76915000: CS asserted (chip selected)
+Time=77015000: DAC data changed from 80 to da (change #10)
+Time=77115000: WR1 falling edge (write started)
+Time=78115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=78305000: CS deasserted (chip deselected)
+Time=79475000: CS asserted (chip selected)
+Time=79575000: DAC data changed from da to 85 (change #11)
+Time=79675000: WR1 falling edge (write started)
+Time=80675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=80865000: CS deasserted (chip deselected)
+Time=82035000: CS asserted (chip selected)
+Time=82135000: DAC data changed from 85 to 22 (change #12)
+Time=82235000: WR1 falling edge (write started)
+Time=83235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=83425000: CS deasserted (chip deselected)
+Time=84595000: CS asserted (chip selected)
+Time=84695000: DAC data changed from 22 to 80 (change #13)
+Time=84795000: WR1 falling edge (write started)
+Time=85795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=85985000: CS deasserted (chip deselected)
+Time=87155000: CS asserted (chip selected)
+Time=87355000: WR1 falling edge (write started)
+Time=88355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=88545000: CS deasserted (chip deselected)
+Time=89715000: CS asserted (chip selected)
+Time=89915000: WR1 falling edge (write started)
+Time=90915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=91105000: CS deasserted (chip deselected)
+Time=92275000: CS asserted (chip selected)
+Time=92475000: WR1 falling edge (write started)
+Time=93475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=93665000: CS deasserted (chip deselected)
+Time=94835000: CS asserted (chip selected)
+Time=95035000: WR1 falling edge (write started)
+Time=96035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=96225000: CS deasserted (chip deselected)
+Time=97395000: CS asserted (chip selected)
+Time=97495000: DAC data changed from 80 to bf (change #14)
+Time=97595000: WR1 falling edge (write started)
+Time=98595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=98785000: CS deasserted (chip deselected)
+Time=99955000: CS asserted (chip selected)
+Time=100055000: DAC data changed from bf to a6 (change #15)
+Time=100155000: WR1 falling edge (write started)
+Time=101155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=101345000: CS deasserted (chip deselected)
+Time=102515000: CS asserted (chip selected)
+Time=102615000: DAC data changed from a6 to 0f (change #16)
+Time=102715000: WR1 falling edge (write started)
+Time=103715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=103905000: CS deasserted (chip deselected)
+Time=105075000: CS asserted (chip selected)
+Time=105175000: DAC data changed from 0f to 80 (change #17)
+Time=105275000: WR1 falling edge (write started)
+Time=106275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=106465000: CS deasserted (chip deselected)
+Time=107635000: CS asserted (chip selected)
+Time=107835000: WR1 falling edge (write started)
+Time=108835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=109025000: CS deasserted (chip deselected)
+Time=110195000: CS asserted (chip selected)
+Time=110395000: WR1 falling edge (write started)
+Time=111395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=111585000: CS deasserted (chip deselected)
+Time=112755000: CS asserted (chip selected)
+Time=112955000: WR1 falling edge (write started)
+Time=113955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=114145000: CS deasserted (chip deselected)
+Time=115315000: CS asserted (chip selected)
+Time=115515000: WR1 falling edge (write started)
+Time=116515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=116705000: CS deasserted (chip deselected)
+Time=117875000: CS asserted (chip selected)
+Time=118075000: WR1 falling edge (write started)
+Time=119075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=119265000: CS deasserted (chip deselected)
+Time=120435000: CS asserted (chip selected)
+Time=120635000: WR1 falling edge (write started)
+Time=121635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=121825000: CS deasserted (chip deselected)
+Time=122995000: CS asserted (chip selected)
+Time=123195000: WR1 falling edge (write started)
+Time=124195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=124385000: CS deasserted (chip deselected)
+Time=125555000: CS asserted (chip selected)
+Time=125755000: WR1 falling edge (write started)
+Time=126755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=126945000: CS deasserted (chip deselected)
+Time=128115000: CS asserted (chip selected)
+Time=128215000: DAC data changed from 80 to 72 (change #18)
+Time=128315000: WR1 falling edge (write started)
+Time=129315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=129505000: CS deasserted (chip deselected)
+Time=130675000: CS asserted (chip selected)
+Time=130775000: DAC data changed from 72 to 2f (change #19)
+Time=130875000: WR1 falling edge (write started)
+Time=131875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=132065000: CS deasserted (chip deselected)
+Time=133235000: CS asserted (chip selected)
+Time=133335000: DAC data changed from 2f to fe (change #20)
+Time=133435000: WR1 falling edge (write started)
+Time=134435000: WR1 rising edge (write completed), pulse width=1000ns
+Time=134625000: CS deasserted (chip deselected)
+Time=135795000: CS asserted (chip selected)
+Time=135895000: DAC data changed from fe to 80 (change #21)
+Time=135995000: WR1 falling edge (write started)
+Time=136995000: WR1 rising edge (write completed), pulse width=1000ns
+Time=137185000: CS deasserted (chip deselected)
+Time=138355000: CS asserted (chip selected)
+Time=138555000: WR1 falling edge (write started)
+Time=139555000: WR1 rising edge (write completed), pulse width=1000ns
+Time=139745000: CS deasserted (chip deselected)
+Time=140915000: CS asserted (chip selected)
+Time=141115000: WR1 falling edge (write started)
+Time=142115000: WR1 rising edge (write completed), pulse width=1000ns
+Time=142305000: CS deasserted (chip deselected)
+Time=143475000: CS asserted (chip selected)
+Time=143675000: WR1 falling edge (write started)
+Time=144675000: WR1 rising edge (write completed), pulse width=1000ns
+Time=144865000: CS deasserted (chip deselected)
+Time=146035000: CS asserted (chip selected)
+Time=146235000: WR1 falling edge (write started)
+Time=147235000: WR1 rising edge (write completed), pulse width=1000ns
+Time=147425000: CS deasserted (chip deselected)
+Time=148595000: CS asserted (chip selected)
+Time=148695000: DAC data changed from 80 to 94 (change #22)
+Time=148795000: WR1 falling edge (write started)
+Time=149795000: WR1 rising edge (write completed), pulse width=1000ns
+Time=149985000: CS deasserted (chip deselected)
+Time=151155000: CS asserted (chip selected)
+Time=151255000: DAC data changed from 94 to 18 (change #23)
+Time=151355000: WR1 falling edge (write started)
+Time=152355000: WR1 rising edge (write completed), pulse width=1000ns
+Time=152545000: CS deasserted (chip deselected)
+Time=153715000: CS asserted (chip selected)
+Time=153815000: DAC data changed from 18 to fb (change #24)
+Time=153915000: WR1 falling edge (write started)
+Time=154915000: WR1 rising edge (write completed), pulse width=1000ns
+Time=155105000: CS deasserted (chip deselected)
+Time=156275000: CS asserted (chip selected)
+Time=156375000: DAC data changed from fb to 41 (change #25)
+Time=156475000: WR1 falling edge (write started)
+Time=157475000: WR1 rising edge (write completed), pulse width=1000ns
+Time=157665000: CS deasserted (chip deselected)
+Time=158835000: CS asserted (chip selected)
+Time=158935000: DAC data changed from 41 to 5a (change #26)
+Time=159035000: WR1 falling edge (write started)
+Time=160035000: WR1 rising edge (write completed), pulse width=1000ns
+Time=160225000: CS deasserted (chip deselected)
+Time=161395000: CS asserted (chip selected)
+Time=161495000: DAC data changed from 5a to f1 (change #27)
+Time=161595000: WR1 falling edge (write started)
+Time=162595000: WR1 rising edge (write completed), pulse width=1000ns
+Time=162785000: CS deasserted (chip deselected)
+Time=163955000: CS asserted (chip selected)
+Time=164055000: DAC data changed from f1 to 0a (change #28)
+Time=164155000: WR1 falling edge (write started)
+Time=165155000: WR1 rising edge (write completed), pulse width=1000ns
+Time=165345000: CS deasserted (chip deselected)
+Time=166515000: CS asserted (chip selected)
+Time=166615000: DAC data changed from 0a to af (change #29)
+Time=166715000: WR1 falling edge (write started)
+Time=167715000: WR1 rising edge (write completed), pulse width=1000ns
+Time=167905000: CS deasserted (chip deselected)
+Time=169075000: CS asserted (chip selected)
+Time=169175000: DAC data changed from af to b4 (change #30)
+Time=169275000: WR1 falling edge (write started)
+Time=170275000: WR1 rising edge (write completed), pulse width=1000ns
+Time=170465000: CS deasserted (chip deselected)
+Time=171635000: CS asserted (chip selected)
+Time=171735000: DAC data changed from b4 to 08 (change #31)
+Time=171835000: WR1 falling edge (write started)
+Time=172835000: WR1 rising edge (write completed), pulse width=1000ns
+Time=173025000: CS deasserted (chip deselected)
+Time=174195000: CS asserted (chip selected)
+Time=174295000: DAC data changed from 08 to 80 (change #32)
+Time=174395000: WR1 falling edge (write started)
+Time=175395000: WR1 rising edge (write completed), pulse width=1000ns
+Time=175585000: CS deasserted (chip deselected)
+Time=176755000: CS asserted (chip selected)
+Time=176955000: WR1 falling edge (write started)
+Time=177955000: WR1 rising edge (write completed), pulse width=1000ns
+Time=178145000: CS deasserted (chip deselected)
+Time=179315000: CS asserted (chip selected)
+Time=179515000: WR1 falling edge (write started)
+Time=180515000: WR1 rising edge (write completed), pulse width=1000ns
+Time=180705000: CS deasserted (chip deselected)
+Time=181875000: CS asserted (chip selected)
+Time=182075000: WR1 falling edge (write started)
+Time=183075000: WR1 rising edge (write completed), pulse width=1000ns
+Time=183265000: CS deasserted (chip deselected)
+Time=184435000: CS asserted (chip selected)
+Time=184635000: WR1 falling edge (write started)
+Time=185635000: WR1 rising edge (write completed), pulse width=1000ns
+Time=185825000: CS deasserted (chip deselected)
+Time=186995000: CS asserted (chip selected)
+Time=187095000: DAC data changed from 80 to 8e (change #33)
+Time=187195000: WR1 falling edge (write started)
+Time=188195000: WR1 rising edge (write completed), pulse width=1000ns
+Time=188385000: CS deasserted (chip deselected)
+Time=189555000: CS asserted (chip selected)
+Time=189655000: DAC data changed from 8e to d1 (change #34)
+Time=189755000: WR1 falling edge (write started)
+Time=190755000: WR1 rising edge (write completed), pulse width=1000ns
+Time=190945000: CS deasserted (chip deselected)
+Time=192115000: CS asserted (chip selected)
+Time=192215000: DAC data changed from d1 to 02 (change #35)
+Time=192315000: WR1 falling edge (write started)
+Time=193315000: WR1 rising edge (write completed), pulse width=1000ns
+Time=193505000: CS deasserted (chip deselected)
+Time=194675000: CS asserted (chip selected)
+Time=194775000: DAC data changed from 02 to da (change #36)
+Time=194875000: WR1 falling edge (write started)
+Time=195875000: WR1 rising edge (write completed), pulse width=1000ns
+Time=196065000: CS deasserted (chip deselected)
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v: file does not exist.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:40 . Memory (MB): peak = 1012.164 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Thu Jun 26 01:04:26 2025] Launched synth_1...
+Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/runme.log
+[Thu Jun 26 01:04:26 2025] Launched impl_1...
+Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/impl_1/runme.log

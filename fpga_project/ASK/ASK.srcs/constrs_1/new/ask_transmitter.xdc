@@ -33,17 +33,18 @@ set_property CFGBVS VCCO [current_design]
 # 设置false path用于异步复位
 set_false_path -from [get_ports rst_n]
 
-# DAC输出约束 - 放宽时序要求以满足DAC0832的规格
-# 修正语法错误：使用 [*] 而不是 []
-set_output_delay -clock [get_clocks sys_clk] -max 4.0 [get_ports {dac_data[*]}]
-set_output_delay -clock [get_clocks sys_clk] -min 1.0 [get_ports {dac_data[*]}]
+# DAC输出约束 - 针对Control Signal Timing模式优化
+# 由于DAC更新速率大幅降低，可以放宽时序要求
+set_output_delay -clock [get_clocks sys_clk] -max 8.0 [get_ports {dac_data[*]}]
+set_output_delay -clock [get_clocks sys_clk] -min 2.0 [get_ports {dac_data[*]}]
 
-# DAC控制信号约束 - 适当放宽以满足实际硬件要求
-set_output_delay -clock [get_clocks sys_clk] -max 4.0 [get_ports {dac_cs_n dac_wr1_n dac_wr2_n dac_xfer_n dac_ile}]
+# DAC控制信号约束 - 这些信号现在是动态的
+set_output_delay -clock [get_clocks sys_clk] -max 3.0 [get_ports {dac_cs_n dac_wr1_n dac_wr2_n dac_xfer_n dac_ile}]
 set_output_delay -clock [get_clocks sys_clk] -min 1.0 [get_ports {dac_cs_n dac_wr1_n dac_wr2_n dac_xfer_n dac_ile}]
 
-# 设置驱动强度和转换速率，有助于改善信号完整性
-set_property DRIVE 12 [get_ports {dac_data[*]}]
+# 设置驱动强度和转换速率，改善信号完整性，避免阻抗不匹配
+# 降低驱动强度，使用SLOW转换速率
+set_property DRIVE 8 [get_ports {dac_data[*]}]
 set_property SLEW SLOW [get_ports {dac_data[*]}]
-set_property DRIVE 12 [get_ports {dac_cs_n dac_wr1_n dac_wr2_n dac_xfer_n dac_ile}]
+set_property DRIVE 8 [get_ports {dac_cs_n dac_wr1_n dac_wr2_n dac_xfer_n dac_ile}]
 set_property SLEW SLOW [get_ports {dac_cs_n dac_wr1_n dac_wr2_n dac_xfer_n dac_ile}]

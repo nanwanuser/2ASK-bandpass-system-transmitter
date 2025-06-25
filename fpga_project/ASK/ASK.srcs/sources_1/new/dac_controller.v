@@ -1,9 +1,12 @@
+
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name: dac_controller
-// Description: DAC0832控制器模块（优化版）
+// Description: DAC0832控制器 - Control Signal Timing模式
 // 
-// 针对535KHz载波优化，确保满足DAC0832时序要求
-// 使用流水线设计实现平滑波形输出
+// 严格遵守DAC0832时序要求：
+// - WR脉冲宽度最小900ns（90个时钟周期@100MHz）
+// - 数据保持时间最小50ns（5个时钟周期）
+// - 使用单缓冲模式，简化控制
 //////////////////////////////////////////////////////////////////////////////////
 module dac_controller(
     input wire clk,                  // 100MHz时钟
@@ -21,139 +24,122 @@ module dac_controller(
 );
 
 // 状态机定义
-localparam IDLE    = 3'd0;
-localparam SETUP   = 3'd1;
-localparam WRITE   = 3'd2;
-localparam HOLD    = 3'd3;
-localparam WAIT    = 3'd4;  // 新增等待状态，确保时序满足
+localparam IDLE        = 3'd0;
+localparam CS_SETUP    = 3'd1;
+localparam DATA_SETUP  = 3'd2;
+localparam WR_ACTIVE   = 3'd3;
+localparam DATA_HOLD   = 3'd4;
+localparam CS_HOLD     = 3'd5;
 
 reg [2:0] state;
-reg [3:0] timer;
-reg [7:0] data_buffer;
-reg [7:0] data_latch;       // 额外的数据锁存器，用于流水线操作
-reg update_pending;
+reg [7:0] timer;         // 扩大计时器以支持长时序
+reg [7:0] data_latch;
 
-// 时序参数（针对100MHz时钟，满足DAC0832规格）
-// DAC0832典型时序要求：
-// - 数据建立时间(tDS): 100ns min
-// - 写脉冲宽度(tWR): 100ns min  
-// - 数据保持时间(tDH): 10ns min
-parameter tSETUP = 4'd10;    // 数据建立时间 100ns (10个时钟周期)
-parameter tWRITE = 4'd10;    // 写脉冲宽度 100ns (10个时钟周期)
-parameter tHOLD  = 4'd2;     // 数据保持时间 20ns (2个时钟周期)
-parameter tWAIT  = 4'd5;     // 等待时间 50ns (5个时钟周期)
+// 时序参数（基于100MHz时钟）
+// 为确保可靠性，使用比最小值更大的时序参数
+parameter tCS_SETUP  = 8'd10;   // CS建立时间 100ns
+parameter tDATA_SETUP = 8'd10;  // 数据建立时间 100ns  
+parameter tWR_PULSE  = 8'd100;  // WR脉冲宽度 1000ns (>900ns)
+parameter tDATA_HOLD = 8'd10;   // 数据保持时间 100ns (>50ns)
+parameter tCS_HOLD   = 8'd10;   // CS保持时间 100ns
 
-// 双缓冲设计，确保数据更新的连续性
+// 单缓冲模式配置
+// CS和WR1用于控制输入寄存器
+// WR2和XFER固定配置让数据直通到DAC寄存器
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        data_buffer <= 8'd128;  // 中间值
-        data_latch <= 8'd128;
-        update_pending <= 1'b0;
+        dac_wr2_n <= 1'b0;   // WR2始终低电平（直通模式）
+        dac_xfer_n <= 1'b0;  // XFER始终低电平（直通模式）
+        dac_ile <= 1'b1;     // ILE始终高电平
     end else begin
-        // 新数据到来时，存入缓冲区
-        if (data_valid && !update_pending) begin
-            data_buffer <= data_in;
-            update_pending <= 1'b1;
-        end else if (state == SETUP && update_pending) begin
-            // 在SETUP状态将数据转移到锁存器
-            data_latch <= data_buffer;
-            update_pending <= 1'b0;
-        end else if (data_valid && update_pending && state != IDLE) begin
-            // 如果正在处理中又有新数据，更新缓冲区
-            data_buffer <= data_in;
-        end
+        dac_wr2_n <= 1'b0;
+        dac_xfer_n <= 1'b0;
+        dac_ile <= 1'b1;
     end
 end
 
-// 优化的状态机
+// 状态机和DAC控制
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         state <= IDLE;
-        timer <= 4'd0;
+        timer <= 8'd0;
+        dac_data <= 8'd128;
+        dac_cs_n <= 1'b1;
+        dac_wr1_n <= 1'b1;
+        data_latch <= 8'd128;
     end else begin
         case (state)
             IDLE: begin
-                timer <= 4'd0;
-                if (update_pending || data_valid) begin
-                    state <= SETUP;
+                timer <= 8'd0;
+                dac_cs_n <= 1'b1;
+                dac_wr1_n <= 1'b1;
+                
+                if (data_valid) begin
+                    data_latch <= data_in;
+                    state <= CS_SETUP;
                 end
             end
-
-            SETUP: begin
-                if (timer >= tSETUP - 1) begin
-                    timer <= 4'd0;
-                    state <= WRITE;
+            
+            CS_SETUP: begin
+                // 拉低CS，建立时间
+                dac_cs_n <= 1'b0;
+                
+                if (timer >= tCS_SETUP - 1) begin
+                    timer <= 8'd0;
+                    state <= DATA_SETUP;
                 end else begin
                     timer <= timer + 1'b1;
                 end
             end
-
-            WRITE: begin
-                if (timer >= tWRITE - 1) begin
-                    timer <= 4'd0;
-                    state <= HOLD;
+            
+            DATA_SETUP: begin
+                // 输出数据，建立时间
+                dac_data <= data_latch;
+                
+                if (timer >= tDATA_SETUP - 1) begin
+                    timer <= 8'd0;
+                    state <= WR_ACTIVE;
                 end else begin
                     timer <= timer + 1'b1;
                 end
             end
-
-            HOLD: begin
-                if (timer >= tHOLD - 1) begin
-                    timer <= 4'd0;
-                    state <= WAIT;
+            
+            WR_ACTIVE: begin
+                // WR脉冲低电平
+                dac_wr1_n <= 1'b0;
+                
+                if (timer >= tWR_PULSE - 1) begin
+                    timer <= 8'd0;
+                    state <= DATA_HOLD;
                 end else begin
                     timer <= timer + 1'b1;
                 end
             end
-
-            WAIT: begin
-                if (timer >= tWAIT - 1) begin
-                    timer <= 4'd0;
-                    // 如果有新数据等待，立即开始下一个周期
-                    if (update_pending || data_valid) begin
-                        state <= SETUP;
-                    end else begin
-                        state <= IDLE;
-                    end
+            
+            DATA_HOLD: begin
+                // WR回高，保持数据
+                dac_wr1_n <= 1'b1;
+                
+                if (timer >= tDATA_HOLD - 1) begin
+                    timer <= 8'd0;
+                    state <= CS_HOLD;
                 end else begin
                     timer <= timer + 1'b1;
                 end
             end
-
+            
+            CS_HOLD: begin
+                // CS回高前的保持时间
+                if (timer >= tCS_HOLD - 1) begin
+                    timer <= 8'd0;
+                    dac_cs_n <= 1'b1;
+                    state <= IDLE;
+                end else begin
+                    timer <= timer + 1'b1;
+                end
+            end
+            
             default: state <= IDLE;
-        endcase
-    end
-end
-
-// DAC控制信号生成（优化时序）
-always @(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-        dac_data <= 8'd128;      // 复位时输出中间值
-        dac_cs_n <= 1'b0;        // CS始终低电平（使能）
-        dac_wr1_n <= 1'b1;       
-        dac_wr2_n <= 1'b0;       // WR2始终低电平（单缓冲模式）
-        dac_xfer_n <= 1'b0;      // XFER始终低电平（直通模式）
-        dac_ile <= 1'b1;         // ILE始终高电平
-    end else begin
-        // 固定的控制信号
-        dac_cs_n <= 1'b0;        // 始终选中
-        dac_wr2_n <= 1'b0;       // 单缓冲模式
-        dac_xfer_n <= 1'b0;      // 直通模式
-        dac_ile <= 1'b1;         // 输入锁存使能
-
-        // 数据输出 - 在SETUP状态开始时更新
-        if (state == SETUP && timer == 4'd0) begin
-            dac_data <= data_latch;
-        end
-
-        // WR1控制 - 严格按照时序要求
-        case (state)
-            WRITE: begin
-                dac_wr1_n <= 1'b0;   // 写脉冲低电平
-            end
-            default: begin
-                dac_wr1_n <= 1'b1;   // 其他状态保持高电平
-            end
         endcase
     end
 end

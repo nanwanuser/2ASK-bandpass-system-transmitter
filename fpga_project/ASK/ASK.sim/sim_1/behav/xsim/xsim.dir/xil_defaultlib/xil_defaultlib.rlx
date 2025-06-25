@@ -3,9 +3,9 @@
 Dec  7 2018
 00:33:28
 D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/sim_1/behav/xsim/glbl.v,1750860493,verilog,,,,glbl,,,,,,,,
-D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v,1750841424,verilog,,,,tb_2ask_transmitter,,,,,,,,
+D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v,1750866411,verilog,,,,tb_2ask_transmitter,,,,,,,,
 D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/sim/ROM.v,1750860952,verilog,,D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v,,ROM,,,,,,,,
 D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/sim/dds.vhd,1750860493,vhdl,,,,dds,,,,,,,,
 D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/fir/sim/fir.vhd,1750860923,vhdl,,,,fir,,,,,,,,
-D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v,1750861279,verilog,,D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v,,dac_controller,,,,,,,,
-D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v,1750851686,verilog,,D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v,,top_2ask_transmitter,,,,,,,,
+D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v,1750870341,verilog,,D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v,,dac_controller,,,,,,,,
+D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v,1750870624,verilog,,D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v,,top_2ask_transmitter,,,,,,,,
