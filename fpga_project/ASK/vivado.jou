@@ -35,3 +35,6 @@ run 10 us
 run 100 us
 save_wave_config {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg}
 close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1

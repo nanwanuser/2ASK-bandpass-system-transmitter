@@ -296,3 +296,9 @@ run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 1125.59
 save_wave_config {D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.sim/tb_2ask_transmitter_behav.wcfg}
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Wed Jun 25 22:22:48 2025] Launched synth_1...
+Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/runme.log
+[Wed Jun 25 22:22:48 2025] Launched impl_1...
+Run output will be captured here: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/impl_1/runme.log
