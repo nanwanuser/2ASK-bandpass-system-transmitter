@@ -1,5 +1,15 @@
 `timescale 1ns / 1ps
 
+//////////////////////////////////////////////////////////////////////////////////
+// Module Name: tb_2ask_transmitter
+// Description: 2ASK调制器测试文件
+// 
+// 测试内容：
+// 1. 验证码元速率为1KHz
+// 2. 验证DAC输出波形
+// 3. 监控关键信号
+//////////////////////////////////////////////////////////////////////////////////
+
 module tb_2ask_transmitter;
 
 // 时钟和复位
@@ -46,33 +56,69 @@ initial begin
     
     // 运行仿真
     // 码元速率为1KHz，每个码元1ms
-    // 运行10个码元的时间，即10ms
-    #10_000_000;
+    // 运行20个码元的时间，即20ms
+    #20_000_000;
     
     // 结束仿真
+    $display("Simulation completed successfully!");
     $finish;
 end
 
-// 监控关键信号（可选）
+// 监控关键信号
 initial begin
-    $monitor("Time=%0t: DAC_DATA=%h, CS_N=%b, WR1_N=%b, WR2_N=%b", 
-             $time, dac_data, dac_cs_n, dac_wr1_n, dac_wr2_n);
+    $monitor("Time=%0t: DAC_DATA=%h, CS_N=%b, WR1_N=%b, WR2_N=%b, XFER_N=%b, ILE=%b", 
+             $time, dac_data, dac_cs_n, dac_wr1_n, dac_wr2_n, dac_xfer_n, dac_ile);
 end
 
-// 生成波形文件（可选）
+// 生成波形文件
 initial begin
     $dumpfile("tb_2ask_transmitter.vcd");
     $dumpvars(0, tb_2ask_transmitter);
 end
 
-// 添加一些内部信号的监控，便于调试
+// 监控DDS输出
 initial begin
-    // 监控DDS原始数据和转换后的数据
-    $monitor("Time=%0t: DDS_signed=%d, DDS_unsigned=%d, Modulated=%d", 
-             $time, 
-             $signed(uut.dds_data), 
-             uut.dds_data_unsigned, 
-             uut.modulated_signal);
+    @(posedge rst_n);
+    #1000;
+    
+    $display("\n=== Monitoring DDS Output ===");
+    repeat(100) begin
+        @(posedge clk);
+        if (uut.dds_valid) begin
+            $display("Time=%0t: DDS_signed=%d, DDS_unsigned=%d, Modulated=%d", 
+                     $time, 
+                     $signed(uut.dds_data), 
+                     uut.dds_data_unsigned, 
+                     uut.modulated_signal);
+        end
+    end
+end
+
+// 计算并显示码元速率
+reg symbol_clk_en_prev;
+real symbol_period_time;
+real prev_symbol_time;
+
+initial begin
+    symbol_clk_en_prev = 0;
+    prev_symbol_time = 0;
+    
+    @(posedge rst_n);
+    
+    forever begin
+        @(posedge clk);
+        if (uut.symbol_clk_en && !symbol_clk_en_prev) begin
+            if (prev_symbol_time != 0) begin
+                symbol_period_time = $time - prev_symbol_time;
+                $display("Time=%0t: Symbol period = %0.3f us, Rate = %0.3f KHz", 
+                         $time, 
+                         symbol_period_time/1000.0, 
+                         1000000.0/symbol_period_time);
+            end
+            prev_symbol_time = $time;
+        end
+        symbol_clk_en_prev = uut.symbol_clk_en;
+    end
 end
 
 endmodule

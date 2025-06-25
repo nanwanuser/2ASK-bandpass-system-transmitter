@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1750765867">
-  <File Type="PA-TCL" Name="ask_transmitter_top.tcl"/>
-  <File Type="REPORTS-TCL" Name="ask_transmitter_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ask_transmitter_top.vds"/>
-  <File Type="RDS-DCP" Name="ask_transmitter_top.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1750837525">
+  <File Type="PA-TCL" Name="top_2ask_transmitter.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_2ask_transmitter_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="top_2ask_transmitter_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_2ask_transmitter.vds"/>
+  <File Type="RDS-UTIL" Name="top_2ask_transmitter_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_2ask_transmitter_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_2ask_transmitter.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_2ask_transmitter_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_2ask_transmitter_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/dac_controller.v">
@@ -13,7 +18,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ask_transmitter_top.v">
+    <File Path="$PSRCDIR/sources_1/new/top_2ask_transmitter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -21,12 +26,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../Parameters/FIR.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Parameters/scrambled_data.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -40,13 +39,13 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ask_transmitter_top"/>
+      <Option Name="TopModule" Val="top_2ask_transmitter"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/ego1.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/ask_transmitter.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -63,11 +62,12 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Multiplier"/>
   <BlockFileSet Type="BlockSrcs" Name="dds"/>
-  <BlockFileSet Type="BlockSrcs" Name="fir"/>
   <BlockFileSet Type="BlockSrcs" Name="ROM"/>
+  <BlockFileSet Type="BlockSrcs" Name="fir"/>
 </GenRun>

@@ -1,0 +1,111 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Jun 25 15:46:27 2025
+| Host         : NanwanPC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_2ask_transmitter_control_sets_placed.rpt
+| Design       : top_2ask_transmitter
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    42 |
+| Unused register locations in slices containing registers |    34 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            2 |
+|      4 |            1 |
+|      7 |            1 |
+|      8 |            2 |
+|    16+ |           35 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             366 |          107 |
+| No           | No                    | Yes                    |              44 |           23 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             519 |           90 |
+| Yes          | No                    | Yes                    |              37 |           16 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------------------------------------------------------------------------------------------+------------------------+------------------+----------------+
+|  Clock Signal  |                                                      Enable Signal                                                      |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------------------------------------------------------------------------------------------+------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | u_dac_controller/dac_wr1_n_i_1_n_0                                                                                      | u_dac_controller/rst_n |                1 |              1 |
+|  clk_IBUF_BUFG | u_dac_controller/dac_cs_n_i_1_n_0                                                                                       | u_dac_controller/rst_n |                2 |              2 |
+|  clk_IBUF_BUFG | u_dac_controller/dac_wr2_n_i_1_n_0                                                                                      | u_dac_controller/rst_n |                2 |              2 |
+|  clk_IBUF_BUFG | u_dac_controller/delay_cnt[3]_i_1_n_0                                                                                   | u_dac_controller/rst_n |                1 |              4 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_latch_op/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[36] |                        |                2 |              7 |
+|  clk_IBUF_BUFG | u_dac_controller/update_enable                                                                                          | u_dac_controller/rst_n |                4 |              8 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/g_s_data_chan_fifo.i_s_data_chan_fifo/wr_enable                            |                        |                1 |              8 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[14]_82[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[16]_80[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[19]_77[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[26]_70[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[11]_85[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[4]_92[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[20]_76[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[25]_71[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[31]_65[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[23]_73[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[13]_83[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[22]_74[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[15]_81[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[17]_79[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[8]_88[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[6]_90[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[27]_69[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[21]_75[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[9]_87[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[10]_86[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[28]_68[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[18]_78[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[3]_93[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[24]_72[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[12]_84[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[30]_66[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[2]_94[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[7]_89[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[1]_95[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[29]_67[6]                                                            |                        |                1 |             16 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/cntrl[5]_91[6]                                                             |                        |                1 |             16 |
+|  clk_IBUF_BUFG | symbol_clk_en                                                                                                           | u_dac_controller/rst_n |                6 |             20 |
+|  clk_IBUF_BUFG |                                                                                                                         | u_dac_controller/rst_n |               23 |             44 |
+|  clk_IBUF_BUFG | u_fir/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/p_193_in                                            |                        |               57 |            272 |
+|  clk_IBUF_BUFG |                                                                                                                         |                        |              107 |            616 |
++----------------+-------------------------------------------------------------------------------------------------------------------------+------------------------+------------------+----------------+
+
+

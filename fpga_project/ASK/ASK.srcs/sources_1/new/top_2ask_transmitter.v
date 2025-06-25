@@ -2,13 +2,13 @@
 
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name: top_2ask_transmitter
-// Description: 2ASK调制器顶层模块
+// Description: 2ASK调制器顶层模块（修改版）
 // 
-// DDS数据处理说明：
-// - DDS输出有符号数据，范围：-128 ~ +127
-// - DAC需要无符号数据，范围：0 ~ 255
-// - 转换方法：无符号 = 有符号 + 128
-// - 无载波时输出DAC中间值：128
+// 主要修改：
+// 1. 码元速率改为1KHz
+// 2. FIR输出改为32位Full Precision模式
+// 3. 直接使用键控方式，不使用乘法器
+// 4. 优化了时序逻辑
 //////////////////////////////////////////////////////////////////////////////////
 
 module top_2ask_transmitter(
@@ -20,14 +20,15 @@ module top_2ask_transmitter(
     output wire dac_cs_n,            // DAC片选
     output wire dac_wr1_n,           // DAC写信号1
     output wire dac_wr2_n,           // DAC写信号2
-    output wire dac_xfer_n,          // DAC传输信号
+    output wire dac_xfer_n,          // DAC传送信号
     output wire dac_ile              // DAC输入锁存使能
 );
 
 // 参数定义
-parameter CLK_FREQ = 100_000_000;              // 系统时钟频率 100MHz
-parameter SYMBOL_RATE = 100000;                  // 码元速率 1KHz
-parameter SYMBOL_PERIOD = CLK_FREQ / SYMBOL_RATE; // 每个码元的时钟周期数
+parameter CLK_FREQ = 100_000_000;                 // 系统时钟频率 100MHz
+//parameter SYMBOL_RATE = 1_000;                    // 码元速率 1KHz
+parameter SYMBOL_RATE = 100_000;                    // 仿真下码元速率 100KHz
+parameter SYMBOL_PERIOD = CLK_FREQ / SYMBOL_RATE; // 每个码元的时钟周期数 = 100,000
 
 // 内部信号
 reg [18:0] rom_addr;
@@ -36,13 +37,14 @@ wire rom_data;
 
 reg [16:0] symbol_counter;           // 码元计数器
 reg symbol_clk_en;                   // 码元时钟使能信号
+reg symbol_clk_en_d1;                // 延迟一拍的码元时钟使能信号
 
 // FIR相关信号
 reg fir_data_valid;
 wire fir_data_ready;
 reg [7:0] fir_data_in;
 wire fir_out_valid;
-wire [7:0] fir_data_out;
+wire [31:0] fir_data_out;           // 修改为32位，Full Precision输出
 
 // DDS相关信号
 wire dds_valid;
@@ -52,7 +54,7 @@ wire [31:0] dds_phase;
 
 // 调制相关信号
 reg [7:0] modulated_signal;
-reg [7:0] fir_data_latched;          // 锁存的FIR输出
+reg [7:0] fir_data_processed;        // 处理后的FIR数据
 reg modulation_enable;               // 调制使能信号
 wire [7:0] dds_data_unsigned;        // 无符号的DDS数据
 
@@ -95,21 +97,24 @@ always @(posedge clk or negedge rst_n) begin
             // 将1bit扩展为8bit，1->255, 0->0
             fir_data_in <= rom_data ? 8'd255 : 8'd0;
         end else begin
-            fir_data_valid <= 1'b0;
+            fir_data_valid <= 1'b1;
         end
     end
 end
 
-// FIR输出锁存和调制使能控制
+// FIR输出处理和调制使能控制
+// 将32位FIR输出截断为8位，取高8位
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        fir_data_latched <= 8'd0;
+        fir_data_processed <= 8'd0;
         modulation_enable <= 1'b0;
     end else begin
         if (fir_out_valid) begin
-            fir_data_latched <= fir_data_out;
+            // Full Precision模式下，取最高8位
+            // 假设FIR输出为Q1.31格式，取[30:23]位作为8位无符号数
+            fir_data_processed <= fir_data_out[30:23];
             // 当FIR输出大于阈值时使能调制
-            modulation_enable <= (fir_data_out > 8'd128);
+            modulation_enable <= (fir_data_out[30:23] > 8'd128);
         end
     end
 end
@@ -117,17 +122,16 @@ end
 // DDS有符号数据转换为无符号数据
 // DDS输出范围：-128 ~ +127 (有符号)
 // DAC需要范围：0 ~ 255 (无符号)
-// 转换方法：直接加128或将最高位取反
 assign dds_data_unsigned = dds_data + 8'd128;
 
-// 2ASK键控调制 - 修正版本
+// 2ASK键控调制
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         modulated_signal <= 8'd128;  // DAC中间值
     end else begin
         // 根据调制使能信号决定输出
         if (modulation_enable) begin
-            modulated_signal <= dds_data_unsigned;     // 输出载波（已转换为无符号）
+            modulated_signal <= dds_data_unsigned;     // 输出载波
         end else begin
             modulated_signal <= 8'd128;               // 输出直流偏置（无载波）
         end
@@ -142,14 +146,14 @@ ROM u_rom (
     .douta(rom_data)
 );
 
-// FIR滤波器实例化
+// FIR滤波器实例化（修改后的接口）
 fir u_fir (
     .aclk(clk),
     .s_axis_data_tvalid(fir_data_valid),
     .s_axis_data_tready(fir_data_ready),
     .s_axis_data_tdata(fir_data_in),
     .m_axis_data_tvalid(fir_out_valid),
-    .m_axis_data_tdata(fir_data_out)
+    .m_axis_data_tdata(fir_data_out)         // 32位输出
 );
 
 // DDS实例化

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ask_transmitter_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ask_transmitter_top.tcl
+EAStep vivado -log top_2ask_transmitter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_2ask_transmitter.tcl
