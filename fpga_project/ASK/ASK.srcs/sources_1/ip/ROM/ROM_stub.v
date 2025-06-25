@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Wed Jun 25 16:06:24 2025
 // Host        : NanwanPC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/ROM/ROM_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ROM -prefix
+//               ROM_ ROM_stub.v
 // Design      : ROM
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcsg324-1

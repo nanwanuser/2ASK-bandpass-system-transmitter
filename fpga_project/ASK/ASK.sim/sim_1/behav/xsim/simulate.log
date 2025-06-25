@@ -51,21 +51,21 @@ Time=45855000: DAC transaction completed, Data=80
 Time=45885000: DAC transaction started
 Time=47935000: DAC transaction completed, Data=80
 Time=47965000: DAC transaction started
-Time=50015000: DAC transaction completed, Data=3b
+Time=50015000: DAC transaction completed, Data=24
 Time=50045000: DAC transaction started
-Time=52095000: DAC transaction completed, Data=78
+Time=52095000: DAC transaction completed, Data=02
 Time=52125000: DAC transaction started
-Time=54175000: DAC transaction completed, Data=b4
+Time=54175000: DAC transaction completed, Data=1e
 Time=54205000: DAC transaction started
-Time=56255000: DAC transaction completed, Data=e6
+Time=56255000: DAC transaction completed, Data=69
 Time=56285000: DAC transaction started
-Time=58335000: DAC transaction completed, Data=fd
+Time=58335000: DAC transaction completed, Data=bf
 Time=58365000: DAC transaction started
-Time=60415000: DAC transaction completed, Data=f5
+Time=60415000: DAC transaction completed, Data=f7
 Time=60445000: DAC transaction started
-Time=62495000: DAC transaction completed, Data=d1
+Time=62495000: DAC transaction completed, Data=f5
 Time=62525000: DAC transaction started
-Time=64575000: DAC transaction completed, Data=97
+Time=64575000: DAC transaction completed, Data=bd
 Time=64605000: DAC transaction started
 Time=66655000: DAC transaction completed, Data=80
 Time=66685000: DAC transaction started
@@ -79,11 +79,11 @@ Time=74975000: DAC transaction completed, Data=80
 Time=75005000: DAC transaction started
 Time=77055000: DAC transaction completed, Data=80
 Time=77085000: DAC transaction started
-Time=79135000: DAC transaction completed, Data=97
+Time=79135000: DAC transaction completed, Data=fb
 Time=79165000: DAC transaction started
-Time=81215000: DAC transaction completed, Data=d1
+Time=81215000: DAC transaction completed, Data=f1
 Time=81245000: DAC transaction started
-Time=83295000: DAC transaction completed, Data=f5
+Time=83295000: DAC transaction completed, Data=b2
 Time=83325000: DAC transaction started
 Time=85375000: DAC transaction completed, Data=80
 Time=85405000: DAC transaction started
@@ -99,11 +99,11 @@ Time=95775000: DAC transaction completed, Data=80
 Time=95805000: DAC transaction started
 Time=97855000: DAC transaction completed, Data=80
 Time=97885000: DAC transaction started
-Time=99935000: DAC transaction completed, Data=12
+Time=99935000: DAC transaction completed, Data=eb
 Time=99965000: DAC transaction started
-Time=102015000: DAC transaction completed, Data=3b
+Time=102015000: DAC transaction completed, Data=a6
 Time=102045000: DAC transaction started
-Time=104095000: DAC transaction completed, Data=78
+Time=104095000: DAC transaction completed, Data=4e
 Time=104125000: DAC transaction started
 Time=106175000: DAC transaction completed, Data=80
 Time=106205000: DAC transaction started
@@ -127,13 +127,13 @@ Time=124895000: DAC transaction completed, Data=80
 Time=124925000: DAC transaction started
 Time=126975000: DAC transaction completed, Data=80
 Time=127005000: DAC transaction started
-Time=129055000: DAC transaction completed, Data=5a
+Time=129055000: DAC transaction completed, Data=43
 Time=129085000: DAC transaction started
 Time=131135000: DAC transaction completed, Data=97
 Time=131165000: DAC transaction started
-Time=133215000: DAC transaction completed, Data=d1
+Time=133215000: DAC transaction completed, Data=e2
 Time=133245000: DAC transaction started
-Time=135295000: DAC transaction completed, Data=f5
+Time=135295000: DAC transaction completed, Data=fe
 Time=135325000: DAC transaction started
 Time=137375000: DAC transaction completed, Data=80
 Time=137405000: DAC transaction started
@@ -147,34 +147,53 @@ Time=145695000: DAC transaction completed, Data=80
 Time=145725000: DAC transaction started
 Time=147775000: DAC transaction completed, Data=80
 Time=147805000: DAC transaction started
-Time=149855000: DAC transaction completed, Data=02
+Time=149855000: DAC transaction completed, Data=a3
 Time=149885000: DAC transaction started
-Time=151935000: DAC transaction completed, Data=12
+Time=151935000: DAC transaction completed, Data=ea
 Time=151965000: DAC transaction started
-Time=154015000: DAC transaction completed, Data=3b
+Time=154015000: DAC transaction completed, Data=fd
 Time=154045000: DAC transaction started
-Time=156095000: DAC transaction completed, Data=78
+Time=156095000: DAC transaction completed, Data=d3
 Time=156125000: DAC transaction started
-Time=158175000: DAC transaction completed, Data=b4
+Time=158175000: DAC transaction completed, Data=82
 Time=158205000: DAC transaction started
-Time=160255000: DAC transaction completed, Data=e6
+Time=160255000: DAC transaction completed, Data=2f
 Time=160285000: DAC transaction started
-Time=162335000: DAC transaction completed, Data=fd
+Time=162335000: DAC transaction completed, Data=04
 Time=162365000: DAC transaction started
-Time=164415000: DAC transaction completed, Data=f5
+Time=164415000: DAC transaction completed, Data=13
 Time=164445000: DAC transaction started
-Time=166495000: DAC transaction completed, Data=d1
+Time=166495000: DAC transaction completed, Data=57
 Time=166525000: DAC transaction started
-Time=168575000: DAC transaction completed, Data=97
+Time=168575000: DAC transaction completed, Data=af
 Time=168605000: DAC transaction started
-Time=170655000: DAC transaction completed, Data=5a
+Time=170655000: DAC transaction completed, Data=f0
 Time=170685000: DAC transaction started
-Time=172735000: DAC transaction completed, Data=24
+Time=172735000: DAC transaction completed, Data=fb
 Time=172765000: DAC transaction started
-Time=174815000: DAC transaction completed, Data=06
+Time=174815000: DAC transaction completed, Data=ca
 Time=174845000: DAC transaction started
 Time=176895000: DAC transaction completed, Data=80
 Time=176925000: DAC transaction started
 Time=178975000: DAC transaction completed, Data=80
 Time=179005000: DAC transaction started
-Time=181055000: DAC trans
+Time=181055000: DAC transaction completed, Data=80
+Time=181085000: DAC transaction started
+Time=183135000: DAC transaction completed, Data=80
+Time=183165000: DAC transaction started
+Time=185215000: DAC transaction completed, Data=80
+Time=185245000: DAC transaction started
+Time=187295000: DAC transaction completed, Data=80
+Time=187325000: DAC transaction started
+Time=189375000: DAC transaction completed, Data=f5
+Time=189405000: DAC transaction started
+Time=191455000: DAC transaction completed, Data=f7
+Time=191485000: DAC transaction started
+Time=193535000: DAC transaction completed, Data=bf
+Time=193565000: DAC transaction started
+Time=195615000: DAC transaction completed, Data=69
+Time=195645000: DAC transaction started
+Time=197695000: DAC transaction completed, Data=20
+Time=197725000: DAC transaction started
+Time=199775000: DAC transaction completed, Data=02
+Time=199805000: DAC transaction started

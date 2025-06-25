@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Jun 25 15:45:29 2025
-# Process ID: 33464
+# Start of session at: Wed Jun 25 20:01:21 2025
+# Process ID: 35748
 # Current directory: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1
 # Command line: vivado.exe -log top_2ask_transmitter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_2ask_transmitter.tcl
 # Log file: D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/top_2ask_transmitter.vds
@@ -15,40 +15,52 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7656 
+INFO: Helper process launched with PID 5468 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 423.320 ; gain = 102.727
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 422.492 ; gain = 102.391
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_2ask_transmitter' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:14]
+INFO: [Synth 8-6157] synthesizing module 'top_2ask_transmitter' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:12]
 	Parameter CLK_FREQ bound to: 100000000 - type: integer 
 	Parameter SYMBOL_RATE bound to: 100000 - type: integer 
 	Parameter SYMBOL_PERIOD bound to: 1000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'ROM' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-33464-NanwanPC/realtime/ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ROM' (1#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-33464-NanwanPC/realtime/ROM_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'fir' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-33464-NanwanPC/realtime/fir_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'fir' (2#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-33464-NanwanPC/realtime/fir_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'dds' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-33464-NanwanPC/realtime/dds_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dds' (3#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-33464-NanwanPC/realtime/dds_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'dac_controller' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:13]
-	Parameter CLK_FREQ bound to: 100000000 - type: integer 
-	Parameter UPDATE_RATE bound to: 100000 - type: integer 
-	Parameter UPDATE_PERIOD bound to: 1000 - type: integer 
-	Parameter IDLE bound to: 3'b000 
-	Parameter SETUP bound to: 3'b001 
-	Parameter WRITE1 bound to: 3'b010 
-	Parameter HOLD1 bound to: 3'b011 
-	Parameter WRITE2 bound to: 3'b100 
-	Parameter HOLD2 bound to: 3'b101 
-	Parameter DONE bound to: 3'b110 
-	Parameter SETUP_TIME bound to: 4'b0010 
-	Parameter WRITE_TIME bound to: 4'b0100 
-	Parameter HOLD_TIME bound to: 4'b0010 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:155]
-INFO: [Synth 8-6155] done synthesizing module 'dac_controller' (4#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:13]
-WARNING: [Synth 8-6014] Unused sequential element fir_data_processed_reg was removed.  [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'top_2ask_transmitter' (5#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:14]
+INFO: [Synth 8-6157] synthesizing module 'ROM' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-35748-NanwanPC/realtime/ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ROM' (1#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-35748-NanwanPC/realtime/ROM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'fir' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-35748-NanwanPC/realtime/fir_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fir' (2#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-35748-NanwanPC/realtime/fir_stub.v:6]
+WARNING: [Synth 8-350] instance 'u_fir' of module 'fir' requires 6 connections, but only 5 given [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:136]
+INFO: [Synth 8-6157] synthesizing module 'dds' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-35748-NanwanPC/realtime/dds_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dds' (3#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/.Xil/Vivado-35748-NanwanPC/realtime/dds_stub.v:6]
+WARNING: [Synth 8-350] instance 'u_dds' of module 'dds' requires 5 connections, but only 2 given [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:145]
+INFO: [Synth 8-6157] synthesizing module 'dac_controller' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:11]
+	Parameter IDLE bound to: 4'b0000 
+	Parameter START bound to: 4'b0001 
+	Parameter CS_LOW bound to: 4'b0010 
+	Parameter ILE_HIGH bound to: 4'b0011 
+	Parameter WR1_SETUP bound to: 4'b0100 
+	Parameter WR1_LOW bound to: 4'b0101 
+	Parameter WR1_HOLD bound to: 4'b0110 
+	Parameter XFER_SETUP bound to: 4'b0111 
+	Parameter XFER_LOW bound to: 4'b1000 
+	Parameter WR2_LOW bound to: 4'b1001 
+	Parameter WR2_HOLD bound to: 4'b1010 
+	Parameter CLEANUP bound to: 4'b1011 
+	Parameter DONE bound to: 4'b1100 
+	Parameter tCS bound to: 8'b00000101 
+	Parameter tILE bound to: 8'b00000101 
+	Parameter tWR bound to: 8'b00111100 
+	Parameter tDS bound to: 8'b00011001 
+	Parameter tDH bound to: 8'b00000101 
+	Parameter tWAIT bound to: 8'b00001010 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:202]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:209]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:216]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:222]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'dac_controller' (4#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:11]
+WARNING: [Synth 8-6014] Unused sequential element fir_data_processed_reg was removed.  [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'top_2ask_transmitter' (5#1) [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/top_2ask_transmitter.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 480.039 ; gain = 159.445
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 478.668 ; gain = 158.566
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -61,10 +73,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 480.039 ; gain = 159.445
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 478.668 ; gain = 158.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 480.039 ; gain = 159.445
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 478.668 ; gain = 158.566
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -81,25 +93,25 @@ Parsing XDC File [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_pro
 Finished Parsing XDC File [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/constrs_1/new/ask_transmitter.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/constrs_1/new/ask_transmitter.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_2ask_transmitter_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_2ask_transmitter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 809.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 801.242 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 809.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 801.297 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 809.418 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 809.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 801.297 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 801.297 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'u_rom' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 802.629 ; gain = 482.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 802.629 ; gain = 482.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -108,27 +120,36 @@ Applied set_property DONT_TOUCH = true for u_dds. (constraint file  auto generat
 Applied set_property DONT_TOUCH = true for u_rom. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for u_fir. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 802.629 ; gain = 482.527
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'dac_xfer_n_reg' into 'dac_wr2_n_reg' [D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/new/dac_controller.v:149]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dac_controller'
-INFO: [Synth 8-5544] ROM "dac_cs_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "dac_wr1_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "dac_wr2_n" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "timer" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dac_cs_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dac_wr1_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dac_wr2_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dac_xfer_n" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dac_ile" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    IDLE |                              000 |                              000
-                   SETUP |                              001 |                              001
-                  WRITE1 |                              010 |                              010
-                   HOLD1 |                              011 |                              011
-                  WRITE2 |                              100 |                              100
-                   HOLD2 |                              101 |                              101
-                    DONE |                              110 |                              110
+                    IDLE |                             0000 |                             0000
+                   START |                             0001 |                             0001
+                  CS_LOW |                             0010 |                             0010
+                ILE_HIGH |                             0011 |                             0011
+               WR1_SETUP |                             0100 |                             0100
+                 WR1_LOW |                             0101 |                             0101
+                WR1_HOLD |                             0110 |                             0110
+              XFER_SETUP |                             0111 |                             0111
+                XFER_LOW |                             1000 |                             1000
+                 WR2_LOW |                             1001 |                             1001
+                WR2_HOLD |                             1010 |                             1010
+                 CLEANUP |                             1011 |                             1011
+                    DONE |                             1100 |                             1100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dac_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 802.629 ; gain = 482.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -141,22 +162,16 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
 +---Registers : 
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 9     
+	                8 Bit    Registers := 5     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 12    
-	   7 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
-	   7 Input      1 Bit        Muxes := 7     
+	   2 Input      8 Bit        Muxes := 2     
+	  13 Input      8 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -170,26 +185,22 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 Module dac_controller 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
-	                4 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
 	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 12    
-	   7 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
-	   7 Input      1 Bit        Muxes := 7     
+	   2 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -206,22 +217,23 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (rom_en_reg)
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[0]' (FDCE) to 'fir_data_in_reg[1]'
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[1]' (FDCE) to 'fir_data_in_reg[2]'
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[2]' (FDCE) to 'fir_data_in_reg[3]'
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[3]' (FDCE) to 'fir_data_in_reg[4]'
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[4]' (FDCE) to 'fir_data_in_reg[5]'
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[5]' (FDCE) to 'fir_data_in_reg[6]'
-INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[6]' (FDCE) to 'fir_data_in_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_2/symbol_counter_reg[14]' (FDC) to 'i_2/symbol_counter_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_2/symbol_counter_reg[12]' (FDC) to 'i_2/symbol_counter_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_2/symbol_counter_reg[16]' (FDC) to 'i_2/symbol_counter_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_2/symbol_counter_reg[15]' (FDC) to 'i_2/symbol_counter_reg[11]'
-INFO: [Synth 8-3886] merging instance 'i_2/symbol_counter_reg[13]' (FDC) to 'i_2/symbol_counter_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\symbol_counter_reg[11] )
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[0]' (FDC) to 'fir_data_in_reg[1]'
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[1]' (FDC) to 'fir_data_in_reg[2]'
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[2]' (FDC) to 'fir_data_in_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[3]' (FDC) to 'fir_data_in_reg[4]'
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[4]' (FDC) to 'fir_data_in_reg[5]'
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[5]' (FDC) to 'fir_data_in_reg[6]'
+INFO: [Synth 8-3886] merging instance 'fir_data_in_reg[6]' (FDC) to 'fir_data_in_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_4/symbol_counter_reg[13]' (FDC) to 'i_4/symbol_counter_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_4/symbol_counter_reg[11]' (FDC) to 'i_4/symbol_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_4/symbol_counter_reg[16]' (FDC) to 'i_4/symbol_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_4/symbol_counter_reg[14]' (FDC) to 'i_4/symbol_counter_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_4/symbol_counter_reg[15]' (FDC) to 'i_4/symbol_counter_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_4/\symbol_counter_reg[12] )
+INFO: [Synth 8-3886] merging instance 'u_dac_controller/timer_reg[7]' (FDCE) to 'u_dac_controller/timer_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_dac_controller/timer_reg[6] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 802.629 ; gain = 482.527
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -233,13 +245,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 802.629 ; gain = 482.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 810.543 ; gain = 489.949
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 820.574 ; gain = 500.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -251,7 +263,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -275,7 +287,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -288,7 +300,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,25 +312,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -342,14 +354,14 @@ Report Cell Usage:
 |3     |fir    |     1|
 |4     |BUFG   |     1|
 |5     |CARRY4 |     8|
-|6     |LUT1   |     2|
-|7     |LUT2   |    14|
-|8     |LUT3   |     9|
-|9     |LUT4   |    18|
-|10    |LUT5   |    11|
-|11    |LUT6   |    32|
-|12    |FDCE   |    74|
-|13    |FDPE   |     6|
+|6     |LUT1   |     1|
+|7     |LUT2   |    13|
+|8     |LUT3   |     8|
+|9     |LUT4   |    24|
+|10    |LUT5   |    13|
+|11    |LUT6   |    29|
+|12    |FDCE   |    66|
+|13    |FDPE   |     7|
 |14    |IBUF   |     2|
 |15    |OBUF   |    13|
 +------+-------+------+
@@ -358,31 +370,31 @@ Report Instance Areas:
 +------+-------------------+---------------+------+
 |      |Instance           |Module         |Cells |
 +------+-------------------+---------------+------+
-|1     |top                |               |   267|
-|2     |  u_dac_controller |dac_controller |    74|
+|1     |top                |               |   262|
+|2     |  u_dac_controller |dac_controller |    70|
 +------+-------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 822.223 ; gain = 501.629
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 822.223 ; gain = 171.125
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 822.223 ; gain = 501.629
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 821.406 ; gain = 177.344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 821.406 ; gain = 501.305
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 822.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 824.602 ; gain = 515.535
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.602 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 822.418 ; gain = 513.797
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 822.418 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.runs/synth_1/top_2ask_transmitter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_2ask_transmitter_utilization_synth.rpt -pb top_2ask_transmitter_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 15:45:50 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 20:01:42 2025...
