@@ -4,3 +4,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-
 INFO: [VRFC 10-311] analyzing module top_2ask_transmitter
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sim_1/new/tb_2ask_transmitter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_2ask_transmitter
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Desktop/2ASK_FPGA/2ASK-bandpass-system-transmitter/fpga_project/ASK/ASK.srcs/sources_1/ip/dds/sim/dds.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'dds'

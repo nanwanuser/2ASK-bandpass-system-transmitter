@@ -106,7 +106,7 @@ architecture tb of tb_dds is
   -----------------------------------------------------------------------
 
   -- Data master channel alias signals
-  signal m_axis_data_tdata_sine        : std_logic_vector(13 downto 0) := (others => '0');
+  signal m_axis_data_tdata_sine        : std_logic_vector(12 downto 0) := (others => '0');
 
   -- Phase master channel alias signals
   signal m_axis_phase_tdata_phase      : std_logic_vector(26 downto 0) := (others => '0');
@@ -213,7 +213,7 @@ begin
   -----------------------------------------------------------------------
 
   -- Data master channel alias signals: update these only when they are valid
-  m_axis_data_tdata_sine        <= m_axis_data_tdata(13 downto 0) when m_axis_data_tvalid = '1';
+  m_axis_data_tdata_sine        <= m_axis_data_tdata(12 downto 0) when m_axis_data_tvalid = '1';
 
   -- Phase master channel alias signals: update these only when they are valid
   m_axis_phase_tdata_phase      <= m_axis_phase_tdata(26 downto 0) when m_axis_phase_tvalid = '1';

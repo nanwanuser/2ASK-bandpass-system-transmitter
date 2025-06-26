@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jun 26 03:45:17 2025
+| Date         : Thu Jun 26 20:56:25 2025
 | Host         : NanwanPC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_2ask_transmitter_methodology_drc_routed.rpt -pb top_2ask_transmitter_methodology_drc_routed.pb -rpx top_2ask_transmitter_methodology_drc_routed.rpx
 | Design       : top_2ask_transmitter
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 15
+             Violations found: 14
 +-----------+----------+-----------------------+------------+
 | Rule      | Severity | Description           | Violations |
 +-----------+----------+-----------------------+------------+
-| TIMING-16 | Warning  | Large setup violation | 15         |
+| TIMING-16 | Warning  | Large setup violation | 14         |
 +-----------+----------+-----------------------+------------+
 
 2. REPORT DETAILS
@@ -39,12 +39,12 @@ Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -10.204 ns between p2_db_reg[6]/C (clocked by sys_clk) and p2_db[6] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.204 ns between p2_db_reg[4]/C (clocked by sys_clk) and p2_db[4] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -10.206 ns between p2_db_reg[2]/C (clocked by sys_clk) and p2_db[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.206 ns between p2_db_reg[0]/C (clocked by sys_clk) and p2_db[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
@@ -59,17 +59,17 @@ Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -10.216 ns between p2_db_reg[8]/C (clocked by sys_clk) and p2_db[8] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.216 ns between p2_db_reg[6]/C (clocked by sys_clk) and p2_db[6] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -10.218 ns between p2_db_reg[4]/C (clocked by sys_clk) and p2_db[4] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.218 ns between p2_db_reg[2]/C (clocked by sys_clk) and p2_db[2] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -10.224 ns between p2_db_reg[0]/C (clocked by sys_clk) and p2_db[0] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.219 ns between p2_db_reg[12]/C (clocked by sys_clk) and p2_db[12] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
@@ -79,12 +79,12 @@ Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -10.227 ns between p2_db_reg[10]/C (clocked by sys_clk) and p2_db[10] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.227 ns between p2_db_reg[3]/C (clocked by sys_clk) and p2_db[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -10.227 ns between p2_db_reg[3]/C (clocked by sys_clk) and p2_db[3] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.227 ns between p2_db_reg[8]/C (clocked by sys_clk) and p2_db[8] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
@@ -94,17 +94,12 @@ Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -10.235 ns between p2_db_reg[12]/C (clocked by sys_clk) and p2_db[12] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.235 ns between p2_db_reg[10]/C (clocked by sys_clk) and p2_db[10] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -10.351 ns between p2_db_reg[13]/C (clocked by sys_clk) and p2_db[13] (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#15 Warning
-Large setup violation  
-There is a large setup violation of -10.373 ns between p2_clk_wrt_reg/C (clocked by sys_clk) and p2_clk_wrt (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -10.374 ns between p2_clk_wrt_reg/C (clocked by sys_clk) and p2_clk_wrt (clocked by sys_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 
