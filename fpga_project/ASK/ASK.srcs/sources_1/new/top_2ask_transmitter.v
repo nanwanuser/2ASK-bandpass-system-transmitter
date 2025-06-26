@@ -16,9 +16,9 @@ module top_2ask_transmitter(
     output reg [12:0] p2_db,         // DAC数据总线（14位）
     output reg p2_clk_wrt            // DAC时钟和写信号（连在一起）
 );
+
 // 参数定义
 parameter CLK_FREQ = 100_000_000;                 // 系统时钟频率 100MHz
-parameter DAC_SAMPLE_RATE = 20_000_000;           // DAC采样率 20MHz
 parameter SYMBOL_RATE = 1_000;                    // 码元速率 1KHz
 //parameter SYMBOL_RATE = 100_000;                    // 仿真码元速率 100KHz
 parameter SYMBOL_PERIOD = CLK_FREQ / SYMBOL_RATE; // 每个码元的时钟周期数
